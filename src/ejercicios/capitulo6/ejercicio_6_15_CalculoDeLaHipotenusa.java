@@ -9,7 +9,7 @@ Triángulo Lado 1 Lado 2
  1        3.0    4.0
  2        5.0    12.0
  3        8.0    15.0
- */
+*/
 
 package ejercicios.capitulo6;
 

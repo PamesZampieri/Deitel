@@ -26,6 +26,7 @@ package ejercicios.capitulo5;
 
 public class ejercicio_5_15_ImprimirUnTriangulo {
     public static void main(String[] args) {
+        //a)
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print('*');
@@ -34,6 +35,7 @@ public class ejercicio_5_15_ImprimirUnTriangulo {
         }
         System.out.println();
 
+        //b)
         for (int i = 0; i < 10; i++) {
             for (int j = 10; j > i; j--) {
                 System.out.print('*');
@@ -42,6 +44,7 @@ public class ejercicio_5_15_ImprimirUnTriangulo {
         }
         System.out.println();
 
+        //c)
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print(' ');
@@ -53,6 +56,7 @@ public class ejercicio_5_15_ImprimirUnTriangulo {
         }
         System.out.println();
 
+        //d)
         for (int i = 0; i < 10; i++) {
             for (int j = 9; j > i; j--) {
                 System.out.print(' ');
@@ -64,6 +68,3 @@ public class ejercicio_5_15_ImprimirUnTriangulo {
         }
     }
 }
-
-
-

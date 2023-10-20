@@ -15,37 +15,45 @@ public class ejercicio_4_20_CalculadoraSalario {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba el Nombre Completo del Empleado: ");
-        String nombreEmpleado = entrada.nextLine();
-        System.out.print("Escriba el Número de Vendedor: ");
+        System.out.print("Escriba el número de vendedor o (-1) para terminar: ");
         int sellerID = entrada.nextInt();
-        System.out.print("Escriba la Cantidad de Horas Trabajadas: ");
-        double horasTrabajadas = entrada.nextDouble();
-        System.out.print("Escriba la Tarifa para el Empleado por Horas Trabajadas: ");
-        double tarifaPorHorasTrabajadas = entrada.nextDouble();
 
-        double coeficientePorHorasExtras = 1.5;
-        double ingresoBruto;
+        if (sellerID != -1) {
+            System.out.print("Escriba el nombre completo del empleado: ");
+            String nombreEmpleado = entrada.nextLine();
+            entrada.next();
+            System.out.print("Escriba la cantidad de horas trabajadas: ");
+            double horasTrabajadas = entrada.nextDouble();
+            System.out.print("Escriba la tarifa para el empleado por horas trabajadas: ");
+            double tarifaPorHorasTrabajadas = entrada.nextDouble();
 
-        while (sellerID != -1) {
-            if (horasTrabajadas <= 40) {
-                ingresoBruto = horasTrabajadas * tarifaPorHorasTrabajadas;
-                System.out.printf("El Ingreso total del empleado %s es de: %.2f%n ", nombreEmpleado, ingresoBruto);
-            } else {
-                ingresoBruto = 40 * tarifaPorHorasTrabajadas +
-                        (horasTrabajadas - 40) * tarifaPorHorasTrabajadas * coeficientePorHorasExtras;
-                System.out.printf("El Ingreso total del empleado %s es de: %.2f%n", nombreEmpleado, ingresoBruto);
+            double coeficientePorHorasExtras = 1.5;
+            double ingresoBruto;
+
+            while (sellerID != -1) {
+                if (horasTrabajadas <= 40) {
+                    ingresoBruto = horasTrabajadas * tarifaPorHorasTrabajadas;
+                    System.out.printf("El ingreso total del empleado %s es de: %.2f%n ", nombreEmpleado, ingresoBruto);
+                } else {
+                    ingresoBruto = 40 * tarifaPorHorasTrabajadas +
+                            (horasTrabajadas - 40) * tarifaPorHorasTrabajadas * coeficientePorHorasExtras;
+                    System.out.printf("El ingreso total del empleado %s es de: %.2f%n", nombreEmpleado, ingresoBruto);
+                }
+                System.out.println();
+
+                System.out.print("Escriba el número de vendedor o (-1) para terminar: ");
+                sellerID = entrada.nextInt();
+
+                if (sellerID != -1) {
+                    System.out.print("Escriba el nombre completo del empleado: ");
+                    nombreEmpleado = entrada.nextLine();
+                    entrada.next();
+                    System.out.print("Escriba la cantidad de horas trabajadas: ");
+                    horasTrabajadas = entrada.nextDouble();
+                    System.out.print("Escriba la tarifa para el empleado por horas trabajadas: ");
+                    tarifaPorHorasTrabajadas = entrada.nextDouble();
+                }
             }
-            System.out.println();
-            System.out.print("Escriba el Nombre Completo del Empleado: ");
-            nombreEmpleado = entrada.nextLine();
-            entrada.nextLine();
-            System.out.print("Escriba el Número de Vendedor: ");
-            sellerID = entrada.nextInt();
-            System.out.print("Escriba la Cantidad de Horas Trabajadas: ");
-            horasTrabajadas = entrada.nextDouble();
-            System.out.print("Escriba la Tarifa para el Empleado por Horas Trabajadas: ");
-            tarifaPorHorasTrabajadas = entrada.nextDouble();
         }
     }
 }

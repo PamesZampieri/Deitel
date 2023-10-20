@@ -2,7 +2,16 @@
 5.24 (Programa para imprimir rombos) Escriba una aplicación que imprima la siguiente figura de rombo. Puede utilizar
 instrucciones de salida que impriman un solo asterisco (*), un solo espacio o un solo carácter de nueva línea.
 Maximice el uso de la repetición (con instrucciones for anidadas), y minimice el número de instrucciones de salida.
- */
+     *
+    ***
+   *****
+  *******
+ *********
+  *******
+   *****
+    ***
+     *
+*/
 
 package ejercicios.capitulo5;
 

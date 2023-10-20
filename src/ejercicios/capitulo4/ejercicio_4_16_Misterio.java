@@ -2,7 +2,6 @@
 4.16 ¿Qué es lo que imprime el siguiente programa?
  */
 
-
 package ejercicios.capitulo4;
 
 public class ejercicio_4_16_Misterio {

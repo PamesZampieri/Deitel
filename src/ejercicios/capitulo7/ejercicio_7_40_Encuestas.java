@@ -1,14 +1,14 @@
 /*
-7.40 (Encuestas) Internet y Web permiten que cada vez haya más personas conectadas en red, unidas por una
-causa, expresen sus opiniones, etcétera. Los candidatos presidenciales recientes usaron Internet en forma intensiva
-para expresar sus mensajes y recaudar dinero para sus campañas. En este ejercicio, escribirá un pequeño programa de
-encuestas que permite a los usuarios calificar cinco asuntos de conciencia social, desde 1 (menos importante) hasta 10
-(más importante). Elija cinco causas que sean importantes para usted (por ejemplo, temas políticos, sobre el medio
-ambiente). Use un arreglo unidimensional llamado temas (de tipo String) para almacenar las cinco causas. Para sintetizar
-las respuestas de la encuesta, use un arreglo bidimensional de 5 filas y 10 columnas llamado respuestas (de tipo
-int), en donde cada fila corresponda a un elemento del arreglo temas. Cuando se ejecute el programa, debe pedir al
-usuario que califique cada tema. Haga que sus amigos y familiares respondan a la encuesta. Después haga que el programa
-muestre un resumen de los resultados, incluyendo:
+7.40 (Encuestas) Internet y Web permiten que cada vez haya más personas conectadas en red, unidas por una causa,
+expresen sus opiniones, etcétera. Los candidatos presidenciales recientes usaron Internet en forma intensiva para
+expresar sus mensajes y recaudar dinero para sus campañas. En este ejercicio, escribirá un pequeño programa de encuestas
+que permite a los usuarios calificar cinco asuntos de conciencia social, desde 1 (menos importante) hasta 10 (más
+importante). Elija cinco causas que sean importantes para usted (por ejemplo, temas políticos, sobre el medio ambiente).
+Use un arreglo unidimensional llamado temas (de tipo String) para almacenar las cinco causas. Para sintetizar las
+respuestas de la encuesta, use un arreglo bidimensional de 5 filas y 10 columnas llamado respuestas (de tipo int), en
+donde cada fila corresponda a un elemento del arreglo temas. Cuando se ejecute el programa, debe pedir al usuario que
+califique cada tema. Haga que sus amigos y familiares respondan a la encuesta. Después haga que el programa muestre un
+resumen de los resultados, incluyendo:
 a) Un informe tabular con los cinco temas del lado izquierdo y las 10 calificaciones en la parte superior, listando en
 cada columna el número de calificaciones recibidas para cada tema.
 b) A la derecha de cada fila, muestre el promedio de las calificaciones para cada tema específico.
@@ -22,7 +22,7 @@ import java.util.Scanner;
 
 public class ejercicio_7_40_Encuestas {
     private static final String[] temas = {"Cuidado del Medioambiente", "Legalidad del Aborto", "Legalidad de la" +
-            " Eutanasia en el pais", "Maternidad Subrogada", "Erradicación de la experimentación en animales"};
+            "Eutanasia en el pais", "Maternidad Subrogada", "Erradicación de la experimentación en animales"};
     private static final int[][] respuestas = new int[5][10];
     private static int cantidadEncuestados = 0;
 
@@ -51,9 +51,10 @@ public class ejercicio_7_40_Encuestas {
         imprimirResultadosEncuesta();
     }
 
-    public static void imprimirResultadosEncuesta() {
-        System.out.printf("%-46s  %10d%10d%10d%10d%10d%10d%10d%10d%10d%10d%15s%n", "TEMAS:",
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "PROMEDIO:");
+    private static void imprimirResultadosEncuesta() {
+        System.out.printf("%-46s  %20s%20s%20s%20s%20s%20s%20s%20s%20s%20s%20s%n", "TEMAS:", "CALIFICACIÓN 1",
+                "CALIFICACIÓN 2", "CALIFICACIÓN 3", "CALIFICACIÓN 4", "CALIFICACIÓN 5", "CALIFICACIÓN 6",
+                "CALIFICACIÓN 7", "CALIFICACIÓN 8", "CALIFICACIÓN 9", "CALIFICACIÓN 10", "PROMEDIO:");
 
         int mayorPuntuacionTotal = 0;
         int menorPuntuacionTotal = Integer.MAX_VALUE;
@@ -66,7 +67,7 @@ public class ejercicio_7_40_Encuestas {
             int totalRespuestas = 0;
 
             for (int j = 0; j < respuestas[i].length; j++) {
-                System.out.printf("%10d", respuestas[i][j]);
+                System.out.printf("%20d", respuestas[i][j]);
 
                 totalRespuestas += respuestas[i][j] * (j + 1);
             }
@@ -82,12 +83,12 @@ public class ejercicio_7_40_Encuestas {
             }
 
             double promedio = (double) totalRespuestas / cantidadEncuestados;
-            System.out.printf("%14.2f%n", promedio);
+            System.out.printf("%19.2f%n", promedio);
         }
 
-        System.out.printf("%nEl tema que recibió la menor puntuación es: %s.%n" +
-                "Puntuación total: %d.", temaConMenorPuntuacion, menorPuntuacionTotal);
-        System.out.printf("%nEl tema que recibió la mayor puntuación es: %s.%n" +
-                "Puntuación total: %d.%n", temaConMayorPuntuacion, mayorPuntuacionTotal);
+        System.out.printf("%nEl tema que recibió la menor puntuación es: %s.%n" + "Puntuación total: %d.%n",
+                temaConMenorPuntuacion, menorPuntuacionTotal);
+        System.out.printf("%nEl tema que recibió la mayor puntuación es: %s.%n" + "Puntuación total: %d.",
+                temaConMayorPuntuacion, mayorPuntuacionTotal);
     }
 }

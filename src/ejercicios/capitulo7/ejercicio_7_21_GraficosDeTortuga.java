@@ -1,19 +1,19 @@
 /*
-7.21 (Gráficos de tortuga) El lenguaje Logo hizo famoso el concepto de los gráficos de tortuga. Imagine a una
-tortuga mecánica que camina portodo el cuarto, bajo el control de una aplicación en Java. La tortuga sostiene un
-bolígrafo en una de dos posiciones, arriba o abajo. Mientras el bolígrafo está abajo, el animalito va trazando figuras a
-medida que se va moviendo, y mientras el bolígrafo está arriba, la tortuga se mueve alrededor libremente, sin trazar
-nada. En este problema usted simulará la operación de la tortuga y creará un bloc de dibujo computarizado.
-Utilice un arreglo de 20 por 20 llamado piso, que se inicialice con ceros. Lea los comandos de un arreglo que
-los contenga. Lleve el registro de la posición actual de la tortuga entodo momento, y si el bolígrafo se encuentra
-arriba o abajo. Suponga que la tortuga siempre empieza en la posición (0, 0) del piso, con su bolígrafo hacia arriba. El
-conjunto de comandos de la tortuga que su aplicación debe procesar se muestra en la figura 7.29.
-A medida que la tortuga se vaya desplazando con el bolígrafo hacia abajo, asigne 1 a los elementos apropiados del
-arreglo piso. Cuando se dé el comando 6 (mostrar el arreglo en pantalla), siempre que haya un 1 en el arreglo, muestre
-un asterisco o cualquier carácter que usted elija. Siempre que haya un 0, muestre un carácter en blanco.
-Escriba una aplicación para implementar las herramientas de gráficos de tortuga aquí descritas. Escriba varios
-programas de gráficos de tortuga para dibujar figuras interesantes. Agregue otros comandos para incrementar el poder
-de su lenguaje de gráficos de tortuga.
+7.21 (Gráficos de tortuga) El lenguaje Logo hizo famoso el concepto de los gráficos de tortuga. Imagine a una tortuga
+mecánica que camina portodo el cuarto, bajo el control de una aplicación en Java. La tortuga sostiene un bolígrafo en
+una de dos posiciones, arriba o abajo. Mientras el bolígrafo está abajo, el animalito va trazando figuras a medida que
+se va moviendo, y mientras el bolígrafo está arriba, la tortuga se mueve alrededor libremente, sin trazar nada.
+En este problema usted simulará la operación de la tortuga y creará un bloc de dibujo computarizado. Utilice un arreglo
+de 20 por 20 llamado piso, que se inicialice con ceros. Lea los comandos de un arreglo que los contenga. Lleve el
+registro de la posición actual de la tortuga entodo momento, y si el bolígrafo se encuentra arriba o abajo. Suponga que
+la tortuga siempre empieza en la posición (0, 0) del piso, con su bolígrafo hacia arriba. El conjunto de comandos de la
+tortuga que su aplicación debe procesar se muestra en la figura 7.29.
+A medida que la tortuga se vaya desplazando con el bolígrafo hacia abajo, asigne 1 a los elementos apropiados del arreglo
+piso. Cuando se dé el comando 6 (mostrar el arreglo en pantalla), siempre que haya un 1 en el arreglo, muestre un
+asterisco o cualquier carácter que usted elija. Siempre que haya un 0, muestre un carácter en blanco.
+Escriba una aplicación para implementar las herramientas de gráficos de tortuga aquí descritas. Escriba varios programas
+de gráficos de tortuga para dibujar figuras interesantes. Agregue otros comandos para incrementar el poder de su lenguaje
+de gráficos de tortuga.
 */
 
 package ejercicios.capitulo7;
@@ -22,7 +22,7 @@ import java.util.Scanner;
 
 public class ejercicio_7_21_GraficosDeTortuga {
     private static final int[][] piso = new int[20][20];
-    private static int[] comandos = {4, 6, 6, 2, 5, 6, 2, 4, 1, 6, 1, 4, 6, 1, 2, 7, 9};
+    private static int[] comandos = {4, 6, 6, 5, 6, 5, 2, 5, 6, 1, 4, 6, 2, 8, 9};
     /*
     Comandos Creados:
     1- Herramienta NADA (Bolígrafo arriba).

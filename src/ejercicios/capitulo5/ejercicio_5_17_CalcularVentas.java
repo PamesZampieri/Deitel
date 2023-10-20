@@ -17,36 +17,45 @@ public class ejercicio_5_17_CalcularVentas {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba el número del producto vendido (1-2-3-4-5): ");
+        System.out.print("Escriba el número del producto vendido (1-2-3-4-5) o (-1) para terminar: ");
         int producto = entrada.nextInt();
-        System.out.print("Escriba la cantidad vendida: ");
+
+        System.out.print("Escriba la cantidad vendida o (-1) para terminar: ");
         int cantidad = entrada.nextInt();
 
         double total = 0;
 
-        while (producto != -1) {
-            switch (producto) {
-                case 1:
-                    total += cantidad * 2.98;
-                    break;
-                case 2:
-                    total += cantidad * 4.50;
-                    break;
-                case 3:
-                    total += cantidad * 9.98;
-                    break;
-                case 4:
-                    total += cantidad * 4.49;
-                    break;
-                case 5:
-                    total += cantidad * 6.87;
-            }
+        if (producto != -1 && cantidad != -1) {
+            while (producto != -1 && cantidad != -1) {
+                switch (producto) {
+                    case 1:
+                        total += cantidad * 2.98;
+                        break;
+                    case 2:
+                        total += cantidad * 4.50;
+                        break;
+                    case 3:
+                        total += cantidad * 9.98;
+                        break;
+                    case 4:
+                        total += cantidad * 4.49;
+                        break;
+                    case 5:
+                        total += cantidad * 6.87;
+                        break;
+                    default:
+                        System.out.print("Error. Escriba un número de producto correcto.");
+                        System.out.println();
+                }
 
-            System.out.print("Escriba el número del producto vendido (1-2-3-4-5): ");
-            producto = entrada.nextInt();
-            System.out.print("Escriba la cantidad vendida: ");
-            cantidad = entrada.nextInt();
+                System.out.println();
+                System.out.print("Escriba el número del producto vendido (1-2-3-4-5) o (-1) para terminar: ");
+                producto = entrada.nextInt();
+                System.out.print("Escriba la cantidad vendida o (-1) para terminar: ");
+                cantidad = entrada.nextInt();
+            }
         }
+
         System.out.println();
         System.out.printf("El total de los productos vendidos es: $%.2f%n", total);
     }

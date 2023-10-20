@@ -11,12 +11,12 @@ public class EncuestaEstudiantes {
             try {
                 ++frecuencia[respuestas[i]];
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println(e);
+                System.out.println(e); //Invoca al método toString() para obtener el mensaje de error almacenado en el objeto excepción y mostrarlo.
                 System.out.printf("   respuestas[%d] = %d%n%n", i, respuestas[i]);
             }
         }
 
-        System.out.printf("%s%10s%n", "Calificación", "Frecuencia");
+        System.out.printf("%s%12s%n", "Calificación", "Frecuencia");
 
         for (int calificacion = 1; calificacion < frecuencia.length; calificacion++) {
             System.out.printf("%6d%10d%n", calificacion, frecuencia[calificacion]);

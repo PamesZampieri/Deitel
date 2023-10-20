@@ -1,8 +1,8 @@
 /*
-6.39 (Instrucción asistida por computadora: variación de los tipos de problemas) Modifique el programa del
-ejercicio 6.38 para permitir al usuario que elija el tipo de problemas aritméticos que desea estudiar. Una opción de 1
-significa problemas de suma solamente, 2 problemas de resta, 3 problemas de multiplicación, 4 problemas de división
-y 5 significa una mezcla aleatoria de problemas de todos estos tipos.
+6.39 (Instrucción asistida por computadora: variación de los tipos de problemas) Modifique el programa del ejercicio
+6.38 para permitir al usuario que elija el tipo de problemas aritméticos que desea estudiar. Una opción de 1 significa
+problemas de suma solamente, 2 problemas de resta, 3 problemas de multiplicación, 4 problemas de división y 5 significa
+una mezcla aleatoria de problemas de todos estos tipos.
 */
 
 package ejercicios.capitulo6;
@@ -18,10 +18,10 @@ public class ejercicio_6_39_CAI_VariacionDeProblemas {
         Scanner entrada = new Scanner(System.in);
         int cantidadDePreguntas = 10;
         double porcentajeAprobacion = 0.75;
+        int continuar = 1;
 
         System.out.println("Este programa le ayudará a practicar distintos problemas aritméticos.");
-
-        int continuar = 1;
+        System.out.println();
 
         while (continuar == 1) {
             int respuestasCorrectas = 0;
@@ -98,8 +98,8 @@ public class ejercicio_6_39_CAI_VariacionDeProblemas {
     }
 
     public static String division() {
-        int numero1 = numerosAleatorios.nextInt(10);
-        int numero2 = numerosAleatorios.nextInt(10);
+        int numero1 = 1 + numerosAleatorios.nextInt(10);
+        int numero2 = 1 + numerosAleatorios.nextInt(10);
 
         respuestaCorrecta = numero1 / numero2;
 

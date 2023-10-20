@@ -26,8 +26,8 @@ String, se muestra el nombre de la constante].
 package ejercicios.capitulo7;
 
 public class Carta {
-    private final Cara cara;
-    private final Palo palo;
+    private final Cara cara; // cara de la carta (“As”, “Dos”, ...)
+    private final Palo palo; // palo de la carta (“Corazones”, “Diamantes”, ...)
     private final int valor;
 
     public Carta(Cara caraCarta, Palo paloCarta) {
@@ -48,6 +48,7 @@ public class Carta {
         return valor;
     }
 
+    // devuelve representación String de Carta
     public String toString() {
         return cara + " de " + palo;
     }

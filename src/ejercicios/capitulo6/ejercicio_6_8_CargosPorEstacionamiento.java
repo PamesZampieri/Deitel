@@ -6,7 +6,7 @@ de 24 horas seguidas. Escriba una aplicación que calcule y muestre los cargos p
 que se haya estacionado ayer. Debe introducir las horas de estacionamiento para cada cliente. El programa debe mostrar
 el cargo para el cliente actual así como calcular y mostrar el total corriente de los recibos de ayer. El programa debe
 utilizar el método calcularCargos para determinar el cargo para cada cliente.
- */
+*/
 
 package ejercicios.capitulo6;
 
@@ -17,7 +17,8 @@ public class ejercicio_6_8_CargosPorEstacionamiento {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba la cantidad de horas de estacionamiento utilizadas por el cliente: ");
+        System.out.print("Escriba la cantidad de horas de estacionamiento utilizadas por el cliente o (-1) para " +
+                "terminar: ");
         double horasDeEstacionamiento = entrada.nextDouble();
         horasDeEstacionamiento = Math.ceil(horasDeEstacionamiento);
 
@@ -34,7 +35,8 @@ public class ejercicio_6_8_CargosPorEstacionamiento {
             System.out.printf("El cargo por el total de %d horas de estacionamiento para el día hasta el momento es de:" +
                     " $%.2f%n%n", (int) totalHorasDeEstacionamiento, totalCargosDeEstacionamiento);
 
-            System.out.print("Escriba la cantidad de horas de estacionamiento utilizadas por el cliente: ");
+            System.out.print("Escriba la cantidad de horas de estacionamiento utilizadas por el cliente o (-1) para " +
+                    "terminar: ");
             horasDeEstacionamiento = entrada.nextDouble();
             horasDeEstacionamiento = Math.ceil(horasDeEstacionamiento);
         }

@@ -9,7 +9,7 @@ sin fondos!” A medida que el juego progrese, imprima varios mensajes para crea
 se esta yendo a la quiebra, verdad?”, o “¡Oh, vamos, arriésguese!”, o “La hizo en grande. ¡Ahora es tiempo de cambiar
 sus fichas por efectivo!”. Implemente la “charla” como un método separado que seleccione en
 forma aleatoria la cadena a mostrar.
- */
+*/
 
 package ejercicios.capitulo6;
 
@@ -30,66 +30,81 @@ public class ejercicio_6_33_CrapsModificado {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int saldoBanco = 1000;
+        int opcion = 1;
 
-        System.out.print("Introduzca una apuesta:$ ");
-        int apuesta = entrada.nextInt();
-
-        while (apuesta > saldoBanco) {
-            System.out.println("Ingrese un valor válido.");
+        while (saldoBanco > 0 && opcion != 2) {
             System.out.print("Introduzca una apuesta:$ ");
-            apuesta = entrada.nextInt();
-        }
+            int apuesta = entrada.nextInt();
 
-        int miPunto = 0;
-        Resultado estadoJuego;
+            while (apuesta > saldoBanco) {
+                System.out.println("Ingrese un valor válido.");
 
-        int sumaDeDados = tirarDados();
+                System.out.print("Introduzca una apuesta:$ ");
+                apuesta = entrada.nextInt();
+            }
 
-        switch (sumaDeDados) {
-            case SIETE:
-            case ONCE:
-                estadoJuego = Resultado.GANO;
-                break;
-            case DOS_UNOS:
-            case TRES:
-            case DOCE:
-                estadoJuego = Resultado.PERDIO;
-                break;
-            default:
-                estadoJuego = Resultado.CONTINUA;
-                miPunto = sumaDeDados;
-                System.out.printf("El punto es %d%n", miPunto);
-                break;
-        }
+            int miPunto = 0;
+            Resultado estadoJuego;
 
-        while (estadoJuego == Resultado.CONTINUA) {
-            System.out.println(charla());
+            int sumaDeDados = tirarDados();
 
-            sumaDeDados = tirarDados();
-
-            if (sumaDeDados == miPunto) {
-                estadoJuego = Resultado.GANO;
-            } else {
-                if (sumaDeDados == SIETE) {
+            switch (sumaDeDados) {
+                case SIETE:
+                case ONCE:
+                    estadoJuego = Resultado.GANO;
+                    break;
+                case DOS_UNOS:
+                case TRES:
+                case DOCE:
                     estadoJuego = Resultado.PERDIO;
+                    break;
+                default:
+                    estadoJuego = Resultado.CONTINUA;
+                    miPunto = sumaDeDados;
+                    System.out.printf("El punto es %d%n", miPunto);
+                    break;
+            }
+
+            while (estadoJuego == Resultado.CONTINUA) {
+                System.out.println(charla());
+
+                sumaDeDados = tirarDados();
+
+                if (sumaDeDados == miPunto) {
+                    estadoJuego = Resultado.GANO;
+                } else {
+                    if (sumaDeDados == SIETE) {
+                        estadoJuego = Resultado.PERDIO;
+                    }
+                }
+
+                if (estadoJuego == Resultado.CONTINUA) {
+                    System.out.println("Continua");
                 }
             }
 
-            if (estadoJuego == Resultado.CONTINUA) {
-                System.out.println("Continua");
+            if (estadoJuego == Resultado.GANO) {
+                System.out.println("El jugador gana.");
+                saldoBanco += apuesta;
+                System.out.println("Saldo Banco es: $ " + saldoBanco);
+            } else {
+                System.out.println("El jugador pierde.");
+                saldoBanco -= apuesta;
+                System.out.println("Saldo Banco es: $ " + saldoBanco);
+                if (saldoBanco == 0) {
+                    System.out.println("¡Lo siento! ¡Se quedó sin fondos!");
+                    break;
+                }
             }
-        }
 
-        if (estadoJuego == Resultado.GANO) {
-            System.out.println("El jugador gana.");
-            saldoBanco += apuesta;
-            System.out.print("Saldo Banco es: $ " + saldoBanco);
-        } else {
-            System.out.println("El jugador pierde.");
-            saldoBanco -= apuesta;
-            System.out.println("Saldo Banco es: $ " + saldoBanco);
-            if (saldoBanco == 0) {
-                System.out.print("¡Lo siento! ¡Se quedó sin fondos!");
+            System.out.print("Para seguir jugando ingrese (1) o (2) si desea terminar: ");
+            opcion = entrada.nextInt();
+
+            while (opcion != 1 && opcion != 2) {
+                System.out.println("Error. Escriba una opción correcta.");
+
+                System.out.print("Para seguir jugando ingrese (1) o (2) si desea terminar: ");
+                opcion = entrada.nextInt();
             }
         }
     }
@@ -112,7 +127,7 @@ public class ejercicio_6_33_CrapsModificado {
             case 1:
                 return "¡Oh, vamos, arriésguese!";
             default:
-                return "¡La hizo en grande!.Ahora es tiempo de cambiar sus fichas por efectivo";
+                return "¡La hizo en grande!. Ahora es tiempo de cambiar sus fichas por efectivo.";
         }
     }
 }

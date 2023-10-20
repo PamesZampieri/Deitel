@@ -1,7 +1,7 @@
 /*
-7.30 (Barajar y repartir cartas) Modifique la aplicación de la figura 7.11 para repartir una mano de póquer de
-cinco cartas. Después modifique la clase PaqueteDeCartas de la figura 7.10 para incluir métodos que determinen si
-una mano contiene
+7.30 (Barajar y repartir cartas) Modifique la aplicación de la figura 7.11 para repartir una mano de póquer de cinco
+cartas. Después modifique la clase PaqueteDeCartas de la figura 7.10 para incluir métodos que determinen siuna mano
+contiene
 a) un par
 b) dos pares
 c) una tercia (como tres reinas)
@@ -11,8 +11,8 @@ f) una escalera (es decir, cinco cartas de valor consecutivo de la misma cara)
 g) “full house” (es decir, dos cartas de un valor de la misma cara y tres cartas de otro valor de la misma cara)
 [Sugerencia: agregue los métodos obtenerCara y obtenerPalo a la clase Carta de la figura 7.9].
 
-7.31 (Barajar y repartir cartas) Use los métodos desarrollados en el ejercicio 7.30 para escribir una aplicación
-que reparta dos manos de póquer de cinco cartas, que evalúe cada mano y determine cuál de las dos es mejor.
+7.31 (Barajar y repartir cartas) Use los métodos desarrollados en el ejercicio 7.30 para escribir una aplicación que
+reparta dos manos de póquer de cinco cartas, que evalúe cada mano y determine cuál de las dos es mejor.
 
 7.34 (Proyecto: barajar y repartir cartas) Modifique la aplicación de las figuras 7.9 a 7.11 para usar los tipos enum
 Cara y Palo que representen las caras y los palos de las cartas. Declare cada uno de estos tipos enum como un tipo
@@ -24,32 +24,38 @@ String, se muestra el nombre de la constante].
 
 7.35 (Algoritmo para barajar cartas Fisher-Yates) Investigue en línea el algoritmo para barajar cartas FisherYates y
 úselo para reimplementar el método barajar en la figura 7.10.
- */
+*/
 
 package ejercicios.capitulo7;
 
 import java.security.SecureRandom;
 
 public class PaqueteDeCartas {
-    private final Carta[] paquete;
-    private int cartaActual;
-    private static final int NUMERO_DE_CARTAS = 52;
+    private final Carta[] paquete; // arreglo de objetos Carta
+    private int cartaActual; // índice de la siguiente Carta a repartir (0 a 51)
+    private static final int NUMERO_DE_CARTAS = 52; // número constante de Cartas
     private static final SecureRandom numerosAleatorios = new SecureRandom();
 
+    // el constructor llena el paquete de Cartas
     public PaqueteDeCartas() {
         Cara[] caras = {Cara.AS, Cara.DOS, Cara.TRES, Cara.CUATRO, Cara.CINCO, Cara.SEIS,
                 Cara.SIETE, Cara.OCHO, Cara.NUEVE, Cara.DIEZ, Cara.JOKER, Cara.REINA, Cara.REY};
         Palo[] palos = {Palo.CORAZONES, Palo.DIAMANTES, Palo.TREBOLES, Palo.ESPADAS};
 
         paquete = new Carta[NUMERO_DE_CARTAS];
-        cartaActual = 0;
+        // crea arreglo de objetos Carta
+        cartaActual = 0; // la primera Carta repartida será paquete[0]
 
+        // llena el paquete con objetos Carta
         for (int i = 0; i < paquete.length; i++) {
+            //(caras[i % 13] produce un valor de 0 a 12 (13 caras) y palos[i / 13] produce un valor de 0 a 3 (4 palos)
             paquete[i] = new Carta(caras[i % 13], palos[i / 13]);
         }
     }
 
+    // baraja el paquete de Cartas con algoritmo de una pasada
     public void barajar() {
+        // la siguiente llamada al método repartirCarta debe empezar en paquete[0] otra vez
         cartaActual = 0;
 
         for (int i = paquete.length - 1; i > 0; i--) {
@@ -61,6 +67,7 @@ public class PaqueteDeCartas {
         }
     }
 
+    // reparte una Carta
     public Carta repartirCarta() {
         if (cartaActual < paquete.length) {
             return paquete[cartaActual++];
@@ -73,8 +80,8 @@ public class PaqueteDeCartas {
         int[] frecuenciasPorCara = getFrecuenciasPorCara(mano);
 
         int cantidadPares = 0;
-        for (int i = 0; i < frecuenciasPorCara.length; i++) {
-            if (frecuenciasPorCara[i] == 2) {
+        for (int i : frecuenciasPorCara) {
+            if (i == 2) {
                 cantidadPares++;
             }
         }
@@ -86,8 +93,8 @@ public class PaqueteDeCartas {
         int[] frecuenciasPorCara = getFrecuenciasPorCara(mano);
 
         int cantidadPares = 0;
-        for (int i = 0; i < frecuenciasPorCara.length; i++) {
-            if (frecuenciasPorCara[i] == 2) {
+        for (int i : frecuenciasPorCara) {
+            if (i == 2) {
                 cantidadPares++;
             }
         }
@@ -99,8 +106,8 @@ public class PaqueteDeCartas {
         int[] frecuenciasPorCara = getFrecuenciasPorCara(mano);
 
         int cantidadTercia = 0;
-        for (int i = 0; i < frecuenciasPorCara.length; i++) {
-            if (frecuenciasPorCara[i] == 3) {
+        for (int i : frecuenciasPorCara) {
+            if (i == 3) {
                 cantidadTercia++;
             }
         }
@@ -112,8 +119,8 @@ public class PaqueteDeCartas {
         int[] frecuenciasPorCara = getFrecuenciasPorCara(mano);
 
         int cantidadPoquer = 0;
-        for (int i = 0; i < frecuenciasPorCara.length; i++) {
-            if (frecuenciasPorCara[i] == 4) {
+        for (int i : frecuenciasPorCara) {
+            if (i == 4) {
                 cantidadPoquer++;
             }
         }
@@ -125,8 +132,8 @@ public class PaqueteDeCartas {
         int[] frecuenciasPorPalo = getFrecuenciasPorPalo(mano);
 
         int cantidadCorrida = 0;
-        for (int i = 0; i < frecuenciasPorPalo.length; i++) {
-            if (frecuenciasPorPalo[i] == 5) {
+        for (int i : frecuenciasPorPalo) {
+            if (i == 5) {
                 cantidadCorrida++;
             }
         }
@@ -157,11 +164,11 @@ public class PaqueteDeCartas {
 
         int cantidadPares = 0;
         int cantidadTercia = 0;
-        for (int i = 0; i < frecuenciasPorCara.length; i++) {
-            if (frecuenciasPorCara[i] == 2) {
+        for (int i : frecuenciasPorCara) {
+            if (i == 2) {
                 cantidadPares++;
             }
-            if (frecuenciasPorCara[i] == 3) {
+            if (i == 3) {
                 cantidadTercia++;
             }
         }
@@ -172,8 +179,8 @@ public class PaqueteDeCartas {
     private int[] getFrecuenciasPorCara(Carta[] mano) {
         int[] frecuenciasPorCara = new int[14];
 
-        for (int i = 0; i < mano.length; i++) {
-            switch (mano[i].getCara()) {
+        for (Carta carta : mano) {
+            switch (carta.getCara()) {
                 case AS:
                     frecuenciasPorCara[1]++;
                     break;
@@ -221,8 +228,8 @@ public class PaqueteDeCartas {
     private int[] getFrecuenciasPorPalo(Carta[] mano) {
         int[] frecuenciasPorPalo = new int[4];
 
-        for (int i = 0; i < mano.length; i++) {
-            switch (mano[i].getPalo()) {
+        for (Carta carta : mano) {
+            switch (carta.getPalo()) {
                 case CORAZONES:
                     frecuenciasPorPalo[0]++;
                     break;
@@ -243,8 +250,9 @@ public class PaqueteDeCartas {
     public static int getMayorValorPorCara(Carta[] mano) {
         int mayorValorPorCara = 0;
 
-        for (int i = 0; i < mano.length; i++) {
-            int valorActual = mano[i].getValor();
+        for (Carta carta : mano) {
+            int valorActual = carta.getValor();
+
             if (valorActual > mayorValorPorCara) {
                 mayorValorPorCara = valorActual;
             }

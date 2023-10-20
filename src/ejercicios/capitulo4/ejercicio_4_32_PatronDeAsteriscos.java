@@ -23,6 +23,7 @@ package ejercicios.capitulo4;
 
 public class ejercicio_4_32_PatronDeAsteriscos {
     public static void main(String[] args) {
+        //Solución 1:
         int lado = 8;
         int fila = 0;
         System.out.println();
@@ -45,6 +46,26 @@ public class ejercicio_4_32_PatronDeAsteriscos {
             System.out.println();
             fila++;
         }
+
+        //Solución 2:
+        fila = 0;
+        System.out.println();
+
+        while (fila < 8) {
+            int columna = 0;
+
+            if (fila % 2 == 1) {
+                System.out.print(" ");
+            }
+
+            while (columna < 8) {
+                System.out.print("*");
+                System.out.print(" ");
+                columna++;
+            }
+
+            fila++;
+            System.out.println();
+        }
     }
 }
-

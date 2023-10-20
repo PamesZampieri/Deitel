@@ -20,6 +20,7 @@ package ejercicios.capitulo4;
 
 import java.util.Scanner;
 
+//Programa para cifrar un número.
 public class ejercicio_4_38_Criptografia {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);

@@ -1,5 +1,5 @@
 /*
-       4.6 Combine las instrucciones que escribió en el ejercicio 4.5 para formar una aplicación en Java que calcule
+4.6 Combine las instrucciones que escribió en el ejercicio 4.5 para formar una aplicación en Java que calcule
 e imprima la suma de los enteros del 1 al 10. Use una instrucción while para iterar a través de las instrucciones de
 cálculo e incremento. El ciclo debe terminar cuando el valor de x se vuelva 11.
 */

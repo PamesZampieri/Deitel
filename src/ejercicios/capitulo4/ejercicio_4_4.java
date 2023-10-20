@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class ejercicio_4_4 {
     public static void main(String[] args) {
-
-        /*
-        a) Usar una instrucción para asignar la suma de x y y a z, e incrementar x en 1 después del cálculo.
+        //a) Usar una instrucción para asignar la suma de x y y a z, e incrementar x en 1 después del cálculo.
 
         int x = 8;
         int y = 5;
@@ -18,7 +16,7 @@ public class ejercicio_4_4 {
         System.out.printf("El valor actual de y es: %d%n", y);
         System.out.printf("El valor actual de z es: %d%n", x + y);
 
-        b) Evaluar si la variable cuenta es mayor que 10. De ser así, imprimir “Cuenta es mayor que 10”.
+        //b) Evaluar si la variable cuenta es mayor que 10. De ser así, imprimir “Cuenta es mayor que 10”.
 
         Scanner entrada = new Scanner(System.in);
 
@@ -30,13 +28,12 @@ public class ejercicio_4_4 {
         }
         System.out.println();
 
-
-
+         /*
         c) Usar una instrucción para decrementar la variable x en 1, luego restarla a la variable total y almacenar el
         resultado en la variable total.
-
          */
-        int x = 30;
+
+        x = 30;
         int total = 50;
 
         total -= --x;
@@ -44,13 +41,11 @@ public class ejercicio_4_4 {
         System.out.printf("El valor de la Variable Total es: %d%n", total);
         System.out.println();
 
-
-        /*d) Calcular el residuo después de dividir q entre divisor, y asignar el resultado a q. Escriba esta instrucción
+        /*
+        d) Calcular el residuo después de dividir q entre divisor, y asignar el resultado a q. Escriba esta instrucción
         de dos maneras distintas
-
-         */
-
         Scanner entrada = new Scanner(System.in);
+        */
 
         System.out.print("Escriba el dividendo: ");
         double q = entrada.nextDouble();

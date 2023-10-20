@@ -1,7 +1,7 @@
 /*
-7.30 (Barajar y repartir cartas) Modifique la aplicación de la figura 7.11 para repartir una mano de póquer de
-cinco cartas. Después modifique la clase PaqueteDeCartas de la figura 7.10 para incluir métodos que determinen si
-una mano contiene
+7.30 (Barajar y repartir cartas) Modifique la aplicación de la figura 7.11 para repartir una mano de póquer de cinco
+cartas. Después modifique la clase PaqueteDeCartas de la figura 7.10 para incluir métodos que determinen siuna mano
+contiene
 a) un par
 b) dos pares
 c) una tercia (como tres reinas)
@@ -11,8 +11,8 @@ f) una escalera (es decir, cinco cartas de valor consecutivo de la misma cara)
 g) “full house” (es decir, dos cartas de un valor de la misma cara y tres cartas de otro valor de la misma cara)
 [Sugerencia: agregue los métodos obtenerCara y obtenerPalo a la clase Carta de la figura 7.9].
 
-7.31 (Barajar y repartir cartas) Use los métodos desarrollados en el ejercicio 7.30 para escribir una aplicación
-que reparta dos manos de póquer de cinco cartas, que evalúe cada mano y determine cuál de las dos es mejor.
+7.31 (Barajar y repartir cartas) Use los métodos desarrollados en el ejercicio 7.30 para escribir una aplicación que
+reparta dos manos de póquer de cinco cartas, que evalúe cada mano y determine cuál de las dos es mejor.
 */
 
 package ejercicios.capitulo7;

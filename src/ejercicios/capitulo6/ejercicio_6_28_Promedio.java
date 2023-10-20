@@ -16,7 +16,7 @@ public class ejercicio_6_28_Promedio {
         System.out.print("Escriba el promedio del estudiante: ");
         int promedio = entrada.nextInt();
 
-        System.out.printf("Los Puntos por Calidad del estudiante son: %d", puntosCalidad(promedio));
+        System.out.printf("Los puntos por calidad del estudiante son: %d", puntosCalidad(promedio));
     }
 
     public static int puntosCalidad(int promedio) {
@@ -32,5 +32,3 @@ public class ejercicio_6_28_Promedio {
         return 0;
     }
 }
-
-

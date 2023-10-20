@@ -7,7 +7,7 @@ package ejercicios.capitulo6;
 
 public class ejercicio_6_3 {
     public static void main(String[] args) {
-        System.out.println("Vamos a controlar que los Métodos de la clase Math den los resultados esperados con los " +
+        System.out.println("Vamos a controlar que los métodos de la clase Math den los resultados esperados con los " +
                 "siguientes ejemplos: ");
         System.out.printf("Método Math.abs(23.7) = %.1f,el resultado esperado es = %.1f ok?. Es %b.%n", Math.abs(23.7),
                 23.7, Math.abs(23.7) == 23.7);

@@ -4,7 +4,7 @@ mil millones de usuarios en octubre de 2012. Use la técnica del cálculo del cr
 figura 5.6 y, suponiendo que su base de usuarios crezca con una tasa del 4% mensual, ¿cuántos meses tardará
 Facebook en aumentar su base de usuarios a mil quinientos millones? ¿Cuántos meses tardará Facebook en aumentar su base
 de usuarios a dos mil millones?
- */
+*/
 
 package ejercicios.capitulo5;
 

@@ -12,7 +12,7 @@ calcule el número de respuestas correctas (de cero a cinco) y devuelva un mensa
 correcta a las cinco preguntas, imprima el mensaje “Excelente”; si responde a cuatro, imprima “Muy bien”; si
 responde a tres o menos, imprima “Es tiempo de aprender más sobre el calentamiento global”, e incluya una lista de
 algunos de los sitios Web en donde encontró esos hechos.
- */
+*/
 
 package ejercicios.capitulo5;
 
@@ -32,8 +32,8 @@ public class ExamenCalentamientoGlobal {
                 "del sistema climático de la Tierra. Es un aspecto primordial del cambio climático actual, demostrado " +
                 "por la medición directa de la temperatura y de varios efectos del calentamiento.");
         System.out.println("3- Es aquel  causado por cambios inducidos por el hombre de forma persistente en la " +
-                "composición de la atmósfera");
-        System.out.println("4- Es el llamado cambio climático");
+                "composición de la atmósfera.");
+        System.out.println("4- Es el llamado cambio climático.");
         int respuesta = entrada.nextInt();
         System.out.println();
 
@@ -49,7 +49,7 @@ public class ExamenCalentamientoGlobal {
                 "en una investigación orientada a la demanda pública y a los intereses políticos.");
         System.out.println("3- Indican que la teoría dice que la formación de nubes aumenta cuando la actividad solar " +
                 "disminuye y la radiación galáctica llega en mayor cantidad a la Tierra.");
-        System.out.println("4- La respuesta 2 y 3 son corectas");
+        System.out.println("4- La respuesta 2 y 3 son corectas.");
         respuesta = entrada.nextInt();
         System.out.println();
 
@@ -57,7 +57,7 @@ public class ExamenCalentamientoGlobal {
             respuestasCorrectas++;
         }
 
-        System.out.println("c- ¿Qué es el efecto invernadero?");
+        System.out.println("c- ¿Qué es el efecto invernadero?: ");
         System.out.println("1- Es un fenómeno natural por el que unos gases determinados que componen la atmósfera retienen" +
                 " parte de la energía solar reflejada por el suelo, absorbiéndola y transformándola en un movimiento " +
                 "molecular interno que produce un aumento de la temperatura.");
@@ -74,14 +74,13 @@ public class ExamenCalentamientoGlobal {
         }
 
         System.out.println("d- ¿Qué es el cambio climático?: ");
-        System.out.println();
         System.out.println("1- Se refiere a una variación significativa en los componentes del clima cuando se comparan " +
                 "períodos prolongados, pudiendo ser décadas o más. Por ejemplo, la temperatura media de la década del 50" +
                 " con respecto a la temperatura media de la década del 90.");
         System.out.println("2- Incluye tanto el calentamiento global como sus efectos en el clima.");
-        System.out.println("3- Las respuestas 1 y 2 son correctas");
+        System.out.println("3- Las respuestas 1 y 2 son correctas.");
         System.out.println("4- Es es el incremento global en las temperaturas de superficie y su aumento proyectado causado" +
-                " predominantemente por actividades humanas (antrópico)");
+                " predominantemente por actividades humanas (antrópico).");
         respuesta = entrada.nextInt();
         System.out.println();
 
@@ -96,7 +95,7 @@ public class ExamenCalentamientoGlobal {
                 " termostato de tu equipo calefactor o refrigerante.");
         System.out.println("3- Ahorra el agua. Cierra el grifo cuando no lo uses y realiza mantenimiento sobre el buen " +
                 "funcionamiento del sistema.");
-        System.out.println("4- Todas las respuestas son correctas");
+        System.out.println("4- Todas las respuestas son correctas.");
         respuesta = entrada.nextInt();
         System.out.println();
 

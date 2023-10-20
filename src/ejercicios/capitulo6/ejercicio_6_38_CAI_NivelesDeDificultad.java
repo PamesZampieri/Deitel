@@ -19,16 +19,17 @@ public class ejercicio_6_38_CAI_NivelesDeDificultad {
         Scanner entrada = new Scanner(System.in);
         int cantidadDePreguntas = 10;
         double porcentajeAprobacion = 0.75;
+        int continuar = 1;
 
         System.out.println("Este programa le ayudará a practicar operaciones de multiplicación.");
-
-        int continuar = 1;
+        System.out.println();
 
         while (continuar == 1) {
             int respuestasCorrectas = 0;
 
-            System.out.print("Seleccione el Nivel de dificultad, tenga en cuenta que 1 es para multiplicaciones" +
-                    " por una cifra, 2 para multiplicaciones por dos cifras y así sucesivamente: ");
+            System.out.println("Seleccione el Nivel de dificultad: 1 - 2 - 3 - etc...");
+            System.out.print("Tenga en cuenta que 1 es para multiplicaciones por una cifra, 2 para multiplicaciones " +
+                    "por dos cifras y así sucesivamente: ");
             int nivelDificultad = entrada.nextInt();
 
             for (int i = 0; i < cantidadDePreguntas; i++) {

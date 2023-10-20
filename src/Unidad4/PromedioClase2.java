@@ -15,6 +15,7 @@ public class PromedioClase2 {
         while (calificacion != -1) {
             total = total + calificacion;
             contadorCalificaciones = contadorCalificaciones + 1;
+
             System.out.print("Escriba la calificación o -1 para terminar: ");
             calificacion = entrada.nextInt();
         }

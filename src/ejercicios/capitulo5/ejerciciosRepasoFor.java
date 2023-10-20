@@ -4,27 +4,35 @@ import java.util.Scanner;
 
 public class ejerciciosRepasoFor {
     public static void main(String[] args) {
-        /* a)Un for que imprima 5 *:
+        /*
+         a)Un for que imprima 5 *:
+         */
         for (int i = 0; i < 5; i++) {
             System.out.print('*');
         }
         System.out.println();
 
-        b)Un for que imprima: *
+        /*
+        b)Un for que imprima:
          *
          *
          *
          *
+         *
+         */
 
         for (int i = 0; i < 5; i++) {
             System.out.println('*');
         }
         System.out.println();
 
-        /* c)Un for que imprima: ***
+        /*
+        c)Un for que imprima:
          ***
          ***
          ***
+         ***
+         */
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
@@ -34,9 +42,11 @@ public class ejerciciosRepasoFor {
         }
         System.out.println();
 
-        /* d) Un for que imprima n * m. En el caso de abajo el usuario ingresó n=2 y m=3:
+        /*
+        d) Un for que imprima n * m. En el caso de abajo el usuario ingresó n = 2 y m = 3:
          ***
          ***
+         */
 
         Scanner entrada = new Scanner(System.in);
 
@@ -51,14 +61,17 @@ public class ejerciciosRepasoFor {
             }
             System.out.println();
         }
+        System.out.println();
 
-        /* e) Un for que imprima:
+        /*
+        e) Un for que imprima:
         *        *
         ***    ***
         **********
+        */
 
-        int n = 1;
-        int m = 8;
+        n = 1;
+        m = 8;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < n; j++) {
@@ -74,13 +87,16 @@ public class ejerciciosRepasoFor {
             n += 2;
             m -= 4;
         }
+        System.out.println();
+
+        /*
         f) Un for que imprima:
         e*Holaeeeee*
         e**Holaeeee*
         e***Holaeee*
         e****Holaee*
         e*****Holae*
-         */
+        */
 
         for (int i = 0; i < 5; i++) {
             System.out.print(' ');

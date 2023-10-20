@@ -19,23 +19,29 @@ public class ejercicio_6_30_AdivineElNumero {
 
     public static void main(String[] args) {
         int numeroGanador = 1 + numerosAleatorios.nextInt(1000);
+        int opcion = 1;
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Adivine un número entero entre 1 y 1000: ");
-        int numero = entrada.nextInt();
+        while(opcion != 2) {
+            System.out.print("Adivine un número entero entre 1 y 1000: ");
+            int numero = entrada.nextInt();
 
-        while (numero != numeroGanador) {
-            if (numero > numeroGanador) {
-                System.out.println("Demasiado Alto! Intente de nuevo.");
-            } else {
-                System.out.println("Demasiado Bajo! Intente de nuevo.");
+            while (numero != numeroGanador) {
+                if (numero > numeroGanador) {
+                    System.out.println("Demasiado Alto! Intente de nuevo.");
+                } else {
+                    System.out.println("Demasiado Bajo! Intente de nuevo.");
+                }
+
+                System.out.print("Nuevo intento: ");
+                numero = entrada.nextInt();
             }
 
-            System.out.print("Nuevo intento: ");
-            numero = entrada.nextInt();
-        }
+            System.out.println("Felicidades! Adivinó el número!");
 
-        System.out.print("Felicidades! Adivinó el número!");
+            System.out.print("¿Desea jugar otra vez? Presione 1 o presione 2 si desea terminar: ");
+            opcion = entrada.nextInt();
+        }
     }
 }

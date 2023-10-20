@@ -1,5 +1,6 @@
 /*
-6.6 Declare el método volumenEsfera para calcular y mostrar el volumen de la esfera. Utilice la siguiente instrucción para calcular el volumen:
+6.6 Declare el método volumenEsfera para calcular y mostrar el volumen de la esfera. Utilice la siguiente instrucción
+para calcular el volumen:
 double volumen = (4.0 / 3.0) * Math.PI * Math.pow(radio, 3)
 Escriba una aplicación en Java que pida al usuario el radio double de una esfera, que llame a volumenEsfera para
 calcular el volumen y muestre el resultado en pantalla.

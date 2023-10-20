@@ -1,10 +1,14 @@
+/*
+5.9 Encuentre y corrija los errores en cada uno de los siguientes fragmentos de código:
+*/
+
 package ejercicios.capitulo5;
+
+import java.util.Scanner;
 
 public class ejercicio_5_9 {
     public static void main(String[] args) {
         /*
-        5.9 Encuentre y corrija los errores en cada uno de los siguientes fragmentos de código:
-
         a) For (i = 100, i >= 1, i++)
         System.out.println(i);
         */
@@ -18,14 +22,17 @@ public class ejercicio_5_9 {
         b) El siguiente código debe imprimirse sin importar si el valor entero es par o impar:
         switch (value % 2)
         {
-        case 0:
+         case 0:
          System.out.println(“Entero par”);
          case 1:
          System.out.println(“Entero impar”);
          }
         */
 
-        int value = 0;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Escriba un número: ");
+        int value = entrada.nextInt();
 
         switch (value % 2) {
             case 0:

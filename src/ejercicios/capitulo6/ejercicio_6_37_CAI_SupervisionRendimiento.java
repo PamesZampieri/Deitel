@@ -1,12 +1,12 @@
 /*
-6.37 (Instrucción asistida por computadora: supervisión del rendimiento de los estudiantes) Los sistemas
-de instrucción asistida por computadora más sofisticados supervisan el rendimiento del estudiante durante cierto
-tiempo. La decisión de empezar un nuevo tema se basa a menudo en el éxito del estudiante con los temas anteriores.
-Modifique el programa del ejercicio 6.36 para contar el número de respuestas correctas e incorrectas introducidas
-por el estudiante. Una vez que el estudiante escriba 10 respuestas, su programa debe calcular el porcentaje de
-respuestas correctas. Si éste es menor del 75%, imprima “Por favor pide ayuda adicional a tu instructor” y reinicie el
-programa, para que otro estudiante pueda probarlo. Si el porcentaje es del 75% o mayor,muestre el mensaje “¡Felicidades,
-estás listo para pasar al siguiente nivel!” y luego reinicie el programa, para que otro estudiante pueda probarlo.
+6.37 (Instrucción asistida por computadora: supervisión del rendimiento de los estudiantes) Los sistemas de instrucción
+asistida por computadora más sofisticados supervisan el rendimiento del estudiante durante cierto tiempo. La decisión de
+empezar un nuevo tema se basa a menudo en el éxito del estudiante con los temas anteriores. Modifique el programa del
+ejercicio 6.36 para contar el número de respuestas correctas e incorrectas introducidas por el estudiante. Una vez que
+el estudiante escriba 10 respuestas, su programa debe calcular el porcentaje de respuestas correctas. Si éste es menor
+del 75%, imprima “Por favor pide ayuda adicional a tu instructor” y reinicie el programa, para que otro estudiante pueda
+probarlo. Si el porcentaje es del 75% o mayor,muestre el mensaje “¡Felicidades, estás listo para pasar al siguiente
+nivel!” y luego reinicie el programa, para que otro estudiante pueda probarlo.
 */
 
 package ejercicios.capitulo6;
@@ -22,9 +22,10 @@ public class ejercicio_6_37_CAI_SupervisionRendimiento {
         Scanner entrada = new Scanner(System.in);
         int cantidadDePreguntas = 10;
         double porcentajeAprobacion = 0.75;
+        int continuar = 1;
 
         System.out.println("Este programa le ayudará a practicar operaciones de multiplicación.");
-        int continuar = 1;
+        System.out.println();
 
         while (continuar == 1) {
             int respuestasCorrectas = 0;

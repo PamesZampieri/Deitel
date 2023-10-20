@@ -15,7 +15,7 @@ public class ejercicio_6_14_Exponenciacion {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Este programa calcula la potencia de un número entero:");
+        System.out.println("Este programa calcula la potencia de un número entero.");
         System.out.print("Escriba un número entero para la base: ");
         int base = entrada.nextInt();
         System.out.print("Escriba un número entero positivo para el exponente: ");

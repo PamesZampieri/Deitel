@@ -14,7 +14,7 @@ public class ejercicio_5_28_InstruccionEstructuradaContinue {
             }
             System.out.printf("%d ", cuenta);
         }
-        System.out.println("\nSe uso continue para evitar imprimir 5");
+        System.out.println("\nSe usó continue para evitar imprimir 5.");
         System.out.println();
 
         //Ejemplo equivalente reemplazando continue:
@@ -23,7 +23,6 @@ public class ejercicio_5_28_InstruccionEstructuradaContinue {
                 System.out.printf("%d ", cuenta);
             }
         }
-        System.out.println("\nSe uso un if con operador lógico de negación para evitar imprimir 5");
+        System.out.println("\nSe usó un if con operador lógico de negación para evitar imprimir 5.");
     }
-
 }

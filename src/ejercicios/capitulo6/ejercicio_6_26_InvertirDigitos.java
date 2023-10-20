@@ -12,7 +12,7 @@ public class ejercicio_6_26_InvertirDigitos {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Este programa imprime un valor entero que se intoduzca,de forma invertida: ");
+        System.out.println("Este programa imprime un valor entero que se intoduzca de forma invertida.");
         System.out.print("Escriba un número entero: ");
         int numero = entrada.nextInt();
 

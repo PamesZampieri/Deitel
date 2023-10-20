@@ -1,7 +1,6 @@
 /*
-Escriba una instrucción o un conjunto de instrucciones en Java, para realizar cada una de las siguientes
-tareas:
- */
+Escriba una instrucción o un conjunto de instrucciones en Java, para realizar cada una de las siguientes tareas:
+*/
 
 package ejercicios.capitulo5;
 
@@ -34,7 +33,7 @@ public class ejercicio_5_3 {
         nueva línea; de lo contrario, imprima un carácter de tabulación. Suponga que este código es una aplicación.
         Utilice el método System.out.println() para producir el carácter de nueva línea, y el método
         System.out.print(‘\t’) para producir el carácter de tabulación].
-
+         */
 
         int i = 1;
 
@@ -49,11 +48,13 @@ public class ejercicio_5_3 {
 
             i++;
         }
+        System.out.println();
 
+        /*
         d) Repita la parte (c), usando una instrucción for.
-         */
+        */
 
-        for (int i = 1; i <= 20; i++) {
+        for (i = 1; i <= 20; i++) {
             System.out.printf("%d", i);
 
             if (i % 5 == 0) {

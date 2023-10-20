@@ -1,3 +1,5 @@
+// Uso de listas de argumentos de longitud variable.
+
 package Unidad7;
 
 public class PruebaVarargs {

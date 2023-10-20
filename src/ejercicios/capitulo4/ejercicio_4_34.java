@@ -8,9 +8,17 @@ package ejercicios.capitulo4;
 
 public class ejercicio_4_34 {
     public static void main(String[] args) {
-        int x = 501;
-        int y = 607;
+        int x = 2;
+        int y = 2;
 
+        //Solución 1:
         System.out.println(++x + y);
+
+        //Solución 2:
+
+        x = 2;
+        y = 2;
+
+        System.out.println(x + ++y);
     }
 }

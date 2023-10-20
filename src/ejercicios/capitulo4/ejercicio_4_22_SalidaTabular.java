@@ -12,14 +12,14 @@ package ejercicios.capitulo4;
 
 public class ejercicio_4_22_SalidaTabular {
     public static void main(String[] args) {
-        int N = 1;
+        int n = 1;
 
         System.out.println("N\t\t\t10*N\t\t\t100*N\t\t\t1000*N");
         System.out.println();
 
-        while (N < 6) {
-            System.out.printf("%d\t\t\t%d\t\t\t\t%d\t\t\t\t%d%n", N, N * 10, N * 100, N * 1000);
-            N++;
+        while (n < 6) {
+            System.out.printf("%d\t\t\t%d\t\t\t\t%d\t\t\t\t%d%n", n, n * 10, n * 100, n * 1000);
+            n++;
         }
     }
 }

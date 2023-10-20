@@ -23,16 +23,18 @@ public class Craps {
             case SIETE:
             case ONCE:
                 estadoJuego = Estado.GANO;
+                System.out.println("El jugador gana.");
                 break;
             case DOS_UNOS:
             case TRES:
             case DOCE:
                 estadoJuego = Estado.PERDIO;
+                System.out.println("El jugador pierde.");
                 break;
             default:
                 estadoJuego = Estado.CONTINUA;
                 miPunto = sumaDeDados;
-                System.out.printf("El punto es %d%n", miPunto);
+                System.out.printf("El punto es %d.%n", miPunto);
                 break;
         }
 
@@ -48,9 +50,9 @@ public class Craps {
             }
 
             if (estadoJuego == Estado.GANO) {
-                System.out.println("El jugador gana");
+                System.out.println("El jugador gana.");
             } else {
-                System.out.println("El jugador pierde");
+                System.out.println("El jugador pierde.");
             }
         }
     }
@@ -66,4 +68,3 @@ public class Craps {
         return suma;
     }
 }
-

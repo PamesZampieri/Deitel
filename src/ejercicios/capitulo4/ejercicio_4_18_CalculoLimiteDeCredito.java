@@ -21,34 +21,40 @@ public class ejercicio_4_18_CalculoLimiteDeCredito {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba su Número de Cuenta: ");
+        System.out.print("Escriba su Número de Cuenta o (-1) para terminar: ");
         int numeroCuenta = entrada.nextInt();
-        System.out.print("Escriba su Saldo Inicial: ");
-        int saldoInicial = entrada.nextInt();
-        System.out.print("Escriba el Total de sus artículos cargados en el mes actual: ");
-        int cargos = entrada.nextInt();
-        System.out.print("Escriba el Total de todos los créditos aplicados a su cuenta: ");
-        int creditos = entrada.nextInt();
 
-        int saldoFinal;
-
-        while (numeroCuenta != -1) {
-            saldoFinal = saldoInicial + cargos - creditos;
-            System.out.printf("El Saldo final de su cuenta número %d es: %d%n", numeroCuenta, saldoFinal);
-
-            if (saldoFinal > 100000) {
-                System.out.printf("Excedió el límite de crédito para su cuenta número %d.%n", numeroCuenta);
-            }
-
-            System.out.println();
-            System.out.print("Escriba su Número de Cuenta: ");
-            numeroCuenta = entrada.nextInt();
+        if (numeroCuenta != -1) {
             System.out.print("Escriba su Saldo Inicial: ");
-            saldoInicial = entrada.nextInt();
+            int saldoInicial = entrada.nextInt();
             System.out.print("Escriba el Total de sus artículos cargados en el mes actual: ");
-            cargos = entrada.nextInt();
+            int cargos = entrada.nextInt();
             System.out.print("Escriba el Total de todos los créditos aplicados a su cuenta: ");
-            creditos = entrada.nextInt();
+            int creditos = entrada.nextInt();
+
+            int saldoFinal;
+
+            while (numeroCuenta != -1) {
+                saldoFinal = saldoInicial + cargos - creditos;
+                System.out.printf("El Saldo final de su cuenta número %d es: %d%n", numeroCuenta, saldoFinal);
+
+                if (saldoFinal > 100000) {
+                    System.out.printf("Excedió el límite de crédito para su cuenta número %d.%n", numeroCuenta);
+                }
+
+                System.out.println();
+                System.out.print("Escriba su Número de Cuenta o (-1) para terminar: ");
+                numeroCuenta = entrada.nextInt();
+
+                if (numeroCuenta != -1) {
+                    System.out.print("Escriba su Saldo Inicial: ");
+                    saldoInicial = entrada.nextInt();
+                    System.out.print("Escriba el Total de sus artículos cargados en el mes actual: ");
+                    cargos = entrada.nextInt();
+                    System.out.print("Escriba el Total de todos los créditos aplicados a su cuenta: ");
+                    creditos = entrada.nextInt();
+                }
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 /*
- 7.14 (Lista de argumentos de longitud variable) Escriba una aplicación que calcule el producto de una serie de
-enteros que se pasan al método producto; use una lista de argumentos de longitud variable. Pruebe su método con
-varias llamadas, cada una con un número distinto de argumentos.
+ 7.14 (Lista de argumentos de longitud variable) Escriba una aplicación que calcule el producto de una serie de enteros
+que se pasan al método producto; use una lista de argumentos de longitud variable. Pruebe su método con varias llamadas,
+cada una con un número distinto de argumentos.
 */
 
 package ejercicios.capitulo7;

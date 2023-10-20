@@ -8,7 +8,7 @@ public class GraficoBarras {
 
         for (int contador = 0; contador < arreglo.length; contador++) {
             if (contador == 10) {
-                System.out.printf("%5d :", 100);
+                System.out.printf("%-5d: ", 100);
             } else {
                 System.out.printf("%02d-%02d: ", contador * 10, contador * 10 + 9);
             }

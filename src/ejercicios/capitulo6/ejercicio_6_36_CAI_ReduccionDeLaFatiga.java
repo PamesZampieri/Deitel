@@ -1,8 +1,8 @@
 /*
-6.36 (Instrucción asistida por computadora: reducción de la fatiga de los estudiantes) Un problema que se
-desarrolla en los entornos CAI es la fatiga de los estudiantes. Este problema puede eliminarse si se varían las
-contestaciones de la computadora para mantener la atención del estudiante. Modifique el programa del ejercicio 6.35 de
-manera que se muestren diversos comentarios para cada respuesta, de la siguiente manera:
+6.36 (Instrucción asistida por computadora: reducción de la fatiga de los estudiantes) Un problema que se desarrolla en
+los entornos CAI es la fatiga de los estudiantes. Este problema puede eliminarse si se varían las contestaciones de la
+computadora para mantener la atención del estudiante. Modifique el programa del ejercicio 6.35 de manera que se muestren
+diversos comentarios para cada respuesta, de la siguiente manera:
 Posibles contestaciones a una respuesta correcta:
  ¡Muy bien!
  ¡Excelente!
@@ -13,9 +13,9 @@ Posibles contestaciones a una respuesta incorrecta:
  Incorrecto. Intenta una vez más.
  ¡No te rindas!
  No. Sigue intentando.
-Use la generación de números aleatorios para elegir un número entre 1 y 4 que se utilice para seleccionar una de
-las cuatro contestaciones apropiadas a cada respuesta correcta o incorrecta. Use una instrucción switch para emitir las
-contestaciones
+Use la generación de números aleatorios para elegir un número entre 1 y 4 que se utilice para seleccionar una de las
+cuatro contestaciones apropiadas a cada respuesta correcta o incorrecta. Use una instrucción switch para emitir las
+contestaciones.
 */
 
 package ejercicios.capitulo6;
@@ -31,6 +31,7 @@ public class ejercicio_6_36_CAI_ReduccionDeLaFatiga {
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Este programa le ayudará a practicar operaciones de multiplicación.");
+        System.out.println();
         System.out.println(multiplicar());
         System.out.print("Escriba a continuación su respuesta o (-1) para terminar: ");
         int respuesta = entrada.nextInt();
@@ -42,6 +43,7 @@ public class ejercicio_6_36_CAI_ReduccionDeLaFatiga {
             } else {
                 System.out.println(getMensajeRespuestaIncorrecta());
             }
+
             System.out.print("Escriba a continuación su respuesta o (-1) para terminar: ");
             respuesta = entrada.nextInt();
         }
@@ -82,7 +84,7 @@ public class ejercicio_6_36_CAI_ReduccionDeLaFatiga {
             case 3:
                 return "¡No te rindas!";
             default:
-                return "No es correcto. Sigue Intentando";
+                return "No es correcto. Sigue Intentando.";
         }
     }
 }

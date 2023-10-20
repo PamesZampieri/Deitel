@@ -19,20 +19,21 @@ public class ejercicio_4_21_EncontrarElNumeroMasGrande {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba un Número Entero: ");
+        System.out.print("Escriba un número entero: ");
         int numero = entrada.nextInt();
 
         int mayor = numero;
-        int contador = 1;
+        int i = 1;
 
-        while (contador < 10) {
-            System.out.print("Escriba un Número Entero: ");
+        while (i < 10) {
+            System.out.print("Escriba un número entero: ");
             numero = entrada.nextInt();
 
             if (numero > mayor) {
                 mayor = numero;
             }
-            contador++;
+
+            i++;
         }
 
         System.out.printf("El número %d es el mayor%n", mayor);

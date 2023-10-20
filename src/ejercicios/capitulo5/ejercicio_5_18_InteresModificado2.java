@@ -22,4 +22,3 @@ public class ejercicio_5_18_InteresModificado2 {
         }
     }
 }
-

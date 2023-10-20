@@ -7,13 +7,14 @@ una condición compuesta en una instrucción if...else que compare el argumento 
 dos letras. Si el código es incorrecto, la parte else de la instrucción if...else debe mostrar un mensaje de error. En
 capítulos posteriores aprenderá a usar el manejo de excepciones para indicar que un método recibió un valor que no
 es válido
- */
+*/
 
 package ejercicios.capitulo5;
 
 public class PruebaPolizaAutoModificada {
     public static void main(String[] args) {
-        PolizaAutoModificada polizaAuto = new PolizaAutoModificada(11111111, "Toyota Camry", "NJ");
+        PolizaAutoModificada polizaAuto = new PolizaAutoModificada(11111111, "Toyota Camry",
+                "NJ");
 
         imprimirPoliza(polizaAuto);
 

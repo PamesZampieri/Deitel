@@ -14,7 +14,8 @@ public class ejercicio_5_29_TheTwelveDaysOfChristmas {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba un día del 1 al 12, de la canción The Twelve Days of Christmas que desea conocer: ");
+        System.out.print("Escriba un día del 1 al 12, de la canción The Twelve Days of Christmas que desea conocer o " +
+                "(-1) para terminar: ");
         int day = entrada.nextInt();
         String diaEscrito;
 
@@ -90,7 +91,8 @@ public class ejercicio_5_29_TheTwelveDaysOfChristmas {
             }
             System.out.println();
 
-            System.out.print("Escriba un día del 1 al 12, de la canción The Twelve Days of Christmas que desea conocer: ");
+            System.out.print("Escriba un día del 1 al 12, de la canción The Twelve Days of Christmas que desea conocer o" +
+                    " (-1) para terminar: ");
             day = entrada.nextInt();
         }
     }

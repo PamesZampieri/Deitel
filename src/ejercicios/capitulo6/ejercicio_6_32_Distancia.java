@@ -21,7 +21,7 @@ public class ejercicio_6_32_Distancia {
         System.out.print("Escriba la coordenada y2 para el punto final: ");
         double y2 = entrada.nextDouble();
 
-        System.out.printf("La distancia recorrida entre los 2 puntos es: %.2f.", distancia(x1, x2, y1, y2));
+        System.out.printf("La distancia recorrida entre los 2 puntos es: %.2f%n", distancia(x1, x2, y1, y2));
     }
 
     public static double distancia(double x1, double x2, double y1, double y2) {

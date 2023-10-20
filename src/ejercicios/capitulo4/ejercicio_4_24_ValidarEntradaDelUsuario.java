@@ -22,7 +22,7 @@ public class ejercicio_4_24_ValidarEntradaDelUsuario {
 
             if (resultado != 1) {
                 if (resultado != 2) {
-                    System.out.println("Error! Escriba el resultado 1 para aprobado y 2 para reprobado.");
+                    System.out.println("Error. Escriba el resultado 1 para aprobado y 2 para reprobado.");
                     System.out.println();
                 }
             }
@@ -45,4 +45,3 @@ public class ejercicio_4_24_ValidarEntradaDelUsuario {
         }
     }
 }
-

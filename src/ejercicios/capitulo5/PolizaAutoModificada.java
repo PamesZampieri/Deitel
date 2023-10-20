@@ -7,7 +7,7 @@ una condición compuesta en una instrucción if...else que compare el argumento 
 dos letras. Si el código es incorrecto, la parte else de la instrucción if...else debe mostrar un mensaje de error. En
 capítulos posteriores aprenderá a usar el manejo de excepciones para indicar que un método recibió un valor que no
 es válido
- */
+*/
 
 package ejercicios.capitulo5;
 
@@ -43,7 +43,7 @@ public class PolizaAutoModificada {
                 "NJ".equals(estado) || "NY".equals(estado) || "PA".equals(estado) || "VT".equals(estado)) {
             this.estado = estado;
         } else {
-            System.out.println("El código ingresado para los estados del noreste de Estados Unidos es incorrecto");
+            System.out.println("El código ingresado para los estados del noreste de Estados Unidos es incorrecto.");
         }
     }
 
@@ -68,4 +68,3 @@ public class PolizaAutoModificada {
         return estadoSinCulpa;
     }
 }
-

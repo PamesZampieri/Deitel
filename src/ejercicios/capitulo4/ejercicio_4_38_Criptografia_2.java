@@ -20,6 +20,7 @@ package ejercicios.capitulo4;
 
 import java.util.Scanner;
 
+//Programa para descifrar un número.
 public class ejercicio_4_38_Criptografia_2 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -32,31 +33,17 @@ public class ejercicio_4_38_Criptografia_2 {
         int cifrado3 = cifrado / 10 % 10;
         int cifrado4 = cifrado % 10;
 
-        if (cifrado1 >= 7) {
-            cifrado1 = cifrado1 - 7;
+        System.out.printf("El número descifrado es: %d%d%d%d%n", descifrar(cifrado3), descifrar(cifrado4),
+                descifrar(cifrado1), descifrar(cifrado2));
+    }
+
+    public static int descifrar(int numero) {
+        if (numero >= 7) {
+            numero -= 7;
         } else {
-            cifrado1 = cifrado1 + 3;
+            numero += 3;
         }
 
-        if (cifrado2 >= 7) {
-            cifrado2 = cifrado2 - 7;
-        } else {
-            cifrado2 = cifrado2 + 3;
-        }
-
-        if (cifrado3 >= 7) {
-            cifrado3 = cifrado3 - 7;
-        } else {
-            cifrado3 = cifrado3 + 3;
-        }
-
-        if (cifrado4 >= 7) {
-            cifrado4 = cifrado4 - 7;
-        } else {
-            cifrado4 = cifrado4 + 3;
-        }
-
-        System.out.printf("El número descifrado es: %d%d%d%d%n", cifrado3, cifrado4, cifrado1,
-                cifrado2);
+        return numero;
     }
 }

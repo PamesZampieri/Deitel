@@ -11,16 +11,16 @@ public class ejercicio_4_23_EncontrarLosDosNumerosMasGrandes {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba un Número Entero: ");
+        System.out.print("Escriba un número entero: ");
         int mayor1 = entrada.nextInt();
 
-        System.out.print("Escriba un Número Entero: ");
+        System.out.print("Escriba un número entero: ");
         int mayor2 = entrada.nextInt();
 
         int contador = 0;
 
         while (contador < 8) {
-            System.out.print("Escriba un Número Entero: ");
+            System.out.print("Escriba un número entero: ");
             int numero = entrada.nextInt();
 
             if (numero > mayor1) {

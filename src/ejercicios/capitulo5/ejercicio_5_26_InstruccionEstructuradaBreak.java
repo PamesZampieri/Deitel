@@ -20,13 +20,13 @@ public class ejercicio_5_26_InstruccionEstructuradaBreak {
             }
             System.out.printf("%d ", cuenta);
         }
-        System.out.printf("%nSalio del ciclo en cuenta = %d%n", cuenta);
+        System.out.printf("%nSalió del ciclo en cuenta = %d%n", cuenta);
         System.out.println();
 
         //Ejemplo equivalente reemplazando break:
         for (cuenta = 1; cuenta < 5; cuenta++) {
             System.out.printf("%d ", cuenta);
         }
-        System.out.printf("%nSalio del ciclo en cuenta = %d%n", cuenta);
+        System.out.printf("%nSalió del ciclo en cuenta = %d%n", cuenta);
     }
 }

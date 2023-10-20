@@ -23,6 +23,14 @@ public class ejercicio_6_29_LanzamientoDeMonedas {
         System.out.print("Escriba 1 para lanzar moneda o escriba 2 para ver los resultados: ");
         int opcion = entrada.nextInt();
 
+        while (opcion != 1 && opcion != 2) {
+            System.out.println("Error. La opción ingresada es incorrecta.");
+
+            System.out.print("Escriba 1 para lanzar moneda o escriba 2 para ver los resultados: ");
+            opcion = entrada.nextInt();
+
+        }
+
         int cantidadCara = 0;
         int cantidadCruz = 0;
 

@@ -30,7 +30,9 @@ public class LibroCalificaciones_1 {
     public int obtenerMinima() {
         int califBaja = calificaciones[0][0];
 
+        // itera a través de las filas del arreglo calificaciones
         for (int[] califEstudiantes : calificaciones) {
+            // itera a través de las columnas de la fila actual
             for (int calificacion : califEstudiantes) {
                 if (calificacion < califBaja) {
                     califBaja = calificacion;
@@ -44,7 +46,9 @@ public class LibroCalificaciones_1 {
     public int obtenerMaxima() {
         int califAlta = calificaciones[0][0];
 
+        // itera a través de las filas del arreglo calificaciones
         for (int[] califEstudiantes : calificaciones) {
+            // itera a través de las columnas de la fila actual
             for (int calificacion : califEstudiantes) {
                 if (calificacion > califAlta) {
                     califAlta = calificacion;
@@ -93,13 +97,14 @@ public class LibroCalificaciones_1 {
 
     public void imprimirCalificaciones() {
         System.out.println("Las calificaciones son:\n");
-        System.out.print("                  ");
+        System.out.print("                  "); // alinea encabezados de columnas
 
+        // crea un encabezado de columna para cada una de las pruebas
         for (int prueba = 0; prueba < calificaciones[0].length; prueba++) {
             System.out.printf("Prueba %d     ", prueba + 1);
         }
 
-        System.out.println("Promedio");
+        System.out.println("Promedio"); // encabezado de columna de promedio de estudiantes
 
         for (int estudiante = 0; estudiante < calificaciones.length; estudiante++) {
             System.out.printf("Estudiante %2d", estudiante + 1);

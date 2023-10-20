@@ -23,6 +23,14 @@ public class ejercicio_6_22_ConversionesDeTemperatura {
                 "(grados fahrenheit): ");
         int opcion = entrada.nextInt();
 
+        while (opcion != 1 && opcion != 2) {
+            System.out.println("Error. Escriba una opción correcta.");
+
+            System.out.print("Escriba 1 para convertir la temperatura a °C (grados centígrados) o 2, para convertir a °F " +
+                    "(grados fahrenheit): ");
+            opcion = entrada.nextInt();
+        }
+
         System.out.print("Escriba la temperatura a convertir: ");
         double temperatura = entrada.nextDouble();
 

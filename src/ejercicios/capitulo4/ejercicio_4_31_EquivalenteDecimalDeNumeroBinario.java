@@ -32,4 +32,3 @@ public class ejercicio_4_31_EquivalenteDecimalDeNumeroBinario {
         System.out.printf("El Número Decimal correspondiente para el Número Binario ingresado es: %d%n", decimal);
     }
 }
-

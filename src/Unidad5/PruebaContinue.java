@@ -9,6 +9,6 @@ public class PruebaContinue {
             System.out.printf("%d ", cuenta);
         }
 
-        System.out.println("\nSe uso continue para evitar imprimir 5");
+        System.out.println("\nSe usó continue para evitar imprimir 5.");
     }
 }

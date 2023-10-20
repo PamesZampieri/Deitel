@@ -19,4 +19,3 @@ public class ejercicio_4_3 {
         System.out.printf("El valor de x es: %d%n", x);
     }
 }
-

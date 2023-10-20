@@ -1,30 +1,30 @@
 /*
-7.28 (Simulación: La tortuga y la liebre) En este problema, usted recreará la clásica carrera de la tortuga y la
-liebre. Utilizará la generación de números aleatorios para desarrollar una simulación de este memorable suceso.
-Nuestros competidores empezarán la carrera en la posición 1 de 70 posiciones. Cada una representa a una
-posible posición a lo largo del curso de la carrera. La línea de meta se encuentra en la 70. El primer competidor en
-llegar a la posición 70 o más allá recibirá una cubeta llena con zanahorias y lechuga frescas. El recorrido se abre paso
-hasta la cima de una resbalosa montaña, por lo que en ocasiones los competidores pierden terreno.
-Un reloj hace tictac una vez por segundo. Con cada tic del reloj, su aplicación debe ajustar la posición de los
-animales de acuerdo con las reglas de la figura 7.32. Use variables para llevar el registro de las posiciones de los
-animales (los números son del 1 al 70). Empiece con cada animal en la posición 1 (la “puerta de inicio”). Si un animal se
-resbala hacia la izquierda antes de la posición 1, regréselo a la posición 1.
+7.28 (Simulación: La tortuga y la liebre) En este problema, usted recreará la clásica carrera de la tortuga y la liebre.
+Utilizará la generación de números aleatorios para desarrollar una simulación de este memorable suceso. Nuestros
+competidores empezarán la carrera en la posición 1 de 70 posiciones. Cada una representa a una posible posición a lo
+largo del curso de la carrera. La línea de meta se encuentra en la 70. El primer competidor en llegar a la posición 70 o
+más allá recibirá una cubeta llena con zanahorias y lechuga frescas. El recorrido se abre paso hasta la cima de una
+resbalosa montaña, por lo que en ocasiones los competidores pierden terreno. Un reloj hace tictac una vez por segundo.
+Con cada tic del reloj, su aplicación debe ajustar la posición de los animales de acuerdo con las reglas de la figura
+7.32. Use variables para llevar el registro de las posiciones de los animales (los números son del 1 al 70). Empiece con
+cada animal en la posición 1 (la “puerta de inicio”). Si un animal se resbala hacia la izquierda antes de la posición 1,
+regréselo a la posición 1.
 Genere los porcentajes en la figura 7.32 al producir un entero aleatorio i en el rango 1 ≤ i ≤ 10. Para la tortuga,
 realice un “paso pesado rápido” cuando 1 ≤ i ≤ 5, un “resbalón” cuando 6 ≤ i ≤ 7 o un “paso pesado lento” cuando
 8 ≤ i ≤ 10. Utilice una técnica similar para mover a la liebre.
 Empiece la carrera imprimiendo el mensaje
 PUM !!!!!
 Y ARRANCAN !!!!!
-Luego, para cada tic tac del reloj (es decir, cada repetición de un ciclo) imprima una línea de 70 posiciones,
-mostrando la letra T en la posición de la tortuga y la letra H en la posición de la liebre. En ocasiones los competidores
-se encontrarán en la misma posición. En este caso, la tortuga muerde a la liebre y su aplicación debe imprimir OUCH!!!
+Luego, para cada tic tac del reloj (es decir, cada repetición de un ciclo) imprima una línea de 70 posiciones, mostrando
+la letra T en la posición de la tortuga y la letra H en la posición de la liebre. En ocasiones los competidores se
+encontrarán en la misma posición. En este caso, la tortuga muerde a la liebre y su aplicación debe imprimir OUCH!!!
 empezando en esa posición. Todas las posiciones de impresión distintas de la T, la H o el mensaje OUCH!!! (en caso de
 un empate) deben estar en blanco.
-Después de imprimir cada línea, compruebe si uno de los animales llegó o se pasó de la posición 70. De ser así,
-imprima quién fue el ganador y termine la simulación. Si la tortuga gana, imprima LA TORTUGA GANA!!! YAY!!!
-Si la liebre gana, imprima La liebre gana. Que mal. Si ambos animales ganan en el mismo tic tac del reloj, tal vez
-usted quiera favorecer a la tortuga (la más débil) o tal vez quiera imprimir Es un empate. Si ninguno de los dos
-animales gana, ejecute el ciclo de nuevo para simular el siguiente tic tac del reloj. Cuando esté listo para ejecutar
+Después de imprimir cada línea, compruebe si uno de los animales llegó o se pasó de la posición 70. De ser así, imprima
+quién fue el ganador y termine la simulación. Si la tortuga gana, imprima LA TORTUGA GANA!!! YAY!!!
+Si la liebre gana, imprima La liebre gana. Que mal. Si ambos animales ganan en el mismo tic tac del reloj, tal vez usted
+quiera favorecer a la tortuga (la más débil) o tal vez quiera imprimir Es un empate. Si ninguno de los dos animales gana,
+ejecute el ciclo de nuevo para simular el siguiente tic tac del reloj. Cuando esté listo para ejecutar
 su aplicación, reúna a un grupo de aficionados para que vean la carrera. ¡Se sorprenderá al ver lo participativa que
 puede ser su audiencia.
 */
@@ -36,7 +36,7 @@ import java.util.Random;
 
 public class ejercicio_7_28_SimulacionLaTortugaYLaLiebre {
     private static final Random numerosAleatorios = new Random();
-    private static char[] pista = new char[71];
+    private static final char[] pista = new char[71];
     private static int posicionTortuga;
     private static int posicionLiebre;
     private static int cantidadDeCarreras = 1;
@@ -79,7 +79,7 @@ public class ejercicio_7_28_SimulacionLaTortugaYLaLiebre {
         }
     }
 
-    public static void moverTortuga(int opcion) {
+    private static void moverTortuga(int opcion) {
         switch (opcion) {
             case 1:
             case 2:
@@ -112,7 +112,7 @@ public class ejercicio_7_28_SimulacionLaTortugaYLaLiebre {
         }
     }
 
-    public static void moverLiebre(int opcion) {
+    private static void moverLiebre(int opcion) {
         switch (opcion) {
             case 3:
             case 4:
@@ -150,7 +150,7 @@ public class ejercicio_7_28_SimulacionLaTortugaYLaLiebre {
         }
     }
 
-    public static void imprimirPista() {
+    private static void imprimirPista() {
         pista[posicionTortuga] = 'T';
         pista[posicionLiebre] = 'H';
 

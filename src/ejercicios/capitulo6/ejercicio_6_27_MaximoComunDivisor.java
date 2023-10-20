@@ -18,7 +18,7 @@ public class ejercicio_6_27_MaximoComunDivisor {
         int numero1 = entrada.nextInt();
         System.out.print("Escriba otro número entero: ");
         int numero2 = entrada.nextInt();
-        System.out.printf("El Máximo Común Divisor utilizando mi Método es: %d y con el Método de Euclides es: %d.",
+        System.out.printf("El Máximo Común Divisor utilizando mi método es: %d y con el método de Euclides es: %d.",
                 mcd(numero1, numero2), mcdEuclides(numero1, numero2));
     }
 

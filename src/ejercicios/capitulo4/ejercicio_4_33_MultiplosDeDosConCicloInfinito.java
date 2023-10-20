@@ -13,7 +13,7 @@ public class ejercicio_4_33_MultiplosDeDosConCicloInfinito {
             System.out.printf("%d%n", numero);
             numero *= 2;
         }
+
         System.out.printf("%d%n", numero);
     }
 }
-

@@ -5,6 +5,15 @@
 package ejercicios.capitulo6;
 
 public class ejercicio_6_5 {
+    public static void main(String[] args) {
+        g(); //a
+        h();
+        System.out.printf("El resultado de la suma de 890 + 450 es = %d%n", suma(890, 450));//b
+        f(5);//c
+        producto();//d
+
+    }
+
     /*
         a) void g()
     {
@@ -15,12 +24,12 @@ public class ejercicio_6_5 {
      }
     }
     */
-    void g() {
-        System.out.println("Dentro del método g");
+    public static void g() {
+        System.out.println("Dentro del método g.");
     }
 
-    void h() {
-        System.out.println("Dentro del método h");
+    public static void h() {
+        System.out.println("Dentro del método h.");
     }
 
     /*
@@ -30,7 +39,7 @@ public class ejercicio_6_5 {
      resultado = x + y;
     }
      */
-    int suma(int x, int y) {
+    public static int suma(int x, int y) {
         int resultado;
         resultado = x + y;
         return resultado;
@@ -43,8 +52,7 @@ public class ejercicio_6_5 {
      System.out.println(a);
     }
     */
-    void f() {
-        float a = (float) 1.0;
+    public static void f(float a) {
         System.out.println(a);
     }
 
@@ -57,7 +65,7 @@ public class ejercicio_6_5 {
     return resultado;
     }
     */
-    int producto() {
+    public static int producto() {
         int a = 6, b = 5, c = 4, resultado;
         resultado = a * b * c;
         System.out.printf("El resultado es %d\n", resultado);

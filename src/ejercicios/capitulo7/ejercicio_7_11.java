@@ -1,9 +1,4 @@
-/*
-7.11 Escriba instrucciones que realicen las siguientes operaciones con arreglos unidimensionales:
-a) Asignar cero a los 10 elementos del arreglo cuentas de tipo entero.
-b) Sumar uno a cada uno de los 15 elementos del arreglo bono de tipo entero.
-c) Imprima los cinco valores del arreglo mejoresPuntuaciones de tipo entero en formato de columnas.
-*/
+//7.11 Escriba instrucciones que realicen las siguientes operaciones con arreglos unidimensionales:
 
 package ejercicios.capitulo7;
 
@@ -11,20 +6,19 @@ import java.util.Arrays;
 
 public class ejercicio_7_11 {
     public static void main(String[] args) {
-        // a)
+        // a) Asignar cero a los 10 elementos del arreglo cuentas de tipo entero.
         int[] cuentas = new int[10];
 
-        for (int i = 0; i < cuentas.length; i++) {
+        for (int i = 0; i < cuentas.length; i++) { // Opción 1
             cuentas[i] = 0;
         }
 
-        // a)
-        Arrays.fill(cuentas, 0);
+        Arrays.fill(cuentas, 0); //Opción 2
 
         mostrarArreglo(cuentas, "cuentas");
         System.out.println();
 
-        // b)
+        // b) Sumar uno a cada uno de los 15 elementos del arreglo bono de tipo entero.
         int[] bono = {13, 12, 3, 5, 6, 78, 90, 100, 34, 3, 45, 89, 1, 25, 60};
 
         for (int i = 0; i < bono.length; i++) {
@@ -34,8 +28,9 @@ public class ejercicio_7_11 {
         mostrarArreglo(bono, "bono");
         System.out.println();
 
-        // c)
+        // c) Imprima los cinco valores del arreglo mejoresPuntuaciones de tipo entero en formato de columnas.
         int[] mejoresPuntuaciones = {100, 90, 80, 70, 60};
+
         System.out.println("MEJORES PUNTUACIONES");
         System.out.printf("%d%11d%10d%10d%10d%n", 1, 2, 3, 4, 5);
 

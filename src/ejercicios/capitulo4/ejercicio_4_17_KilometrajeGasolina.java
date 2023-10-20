@@ -16,16 +16,16 @@ public class ejercicio_4_17_KilometrajeGasolina {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba los Kilómetros conducidos de su viaje: ");
+        System.out.print("Escriba los Kilómetros conducidos de su viaje o (-1) para terminar: ");
         int kilometros = entrada.nextInt();
-        System.out.print("Escriba los litros utilizados en su viaje: ");
+        System.out.print("Escriba los litros utilizados en su viaje o (-1) para terminar: ");
         int litros = entrada.nextInt();
 
         int totalKilometros = 0;
         int totalLitros = 0;
         double kilometrosXlitro;
 
-        while (kilometros != -1) {
+        while (kilometros != -1 && litros != -1) {
             kilometrosXlitro = (double) kilometros / litros;
             System.out.printf("Este viaje tuvo el siguiente consumo de kilometros por litro: %.2f%n", kilometrosXlitro);
             System.out.println();
@@ -33,14 +33,16 @@ public class ejercicio_4_17_KilometrajeGasolina {
             totalKilometros += kilometros;
             totalLitros += litros;
 
-            System.out.print("Escriba los Kilómetros conducidos de su viaje: ");
+            System.out.print("Escriba los Kilómetros conducidos de su viaje o (-1) para terminar: ");
             kilometros = entrada.nextInt();
-            System.out.print("Escriba los litros utilizados en su viaje: ");
+            System.out.print("Escriba los litros utilizados en su viaje o (-1) para terminar: ");
             litros = entrada.nextInt();
         }
 
-        kilometrosXlitro = (double) totalKilometros / totalLitros;
-        System.out.printf("El promedio de kilometros por litro de todos los viajes introducidos es: %.2f%n",
-                kilometrosXlitro);
+        if (totalKilometros > 0 || totalLitros > 0) {
+            kilometrosXlitro = (double) totalKilometros / totalLitros;
+            System.out.printf("El promedio de kilometros por litro de todos los viajes introducidos es: %.2f%n",
+                    kilometrosXlitro);
+        }
     }
 }

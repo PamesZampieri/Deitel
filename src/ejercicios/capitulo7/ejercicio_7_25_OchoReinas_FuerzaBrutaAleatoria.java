@@ -31,16 +31,16 @@ public class ejercicio_7_25_OchoReinas_FuerzaBrutaAleatoria {
             }
 
             if (numeroDeMovimientos == 8) {
-                System.out.printf("Cantidad de intentos para posicionar las 8 reinas: %d%n", i + 1);
+                System.out.printf("Cantidad de intentos para posicionar las 8 reinas: %d%n%n", i + 1);
                 break;
             }
         }
 
-        imprimirTablero(tablero);
+        imprimirTablero();
         System.out.println();
     }
 
-    public static void ponerReina() {
+    private static void ponerReina() {
         for (int i = 0; i < 50; i++) {
             int indiceFila = numerosAleatorios.nextInt(8);
             int indiceColumna = numerosAleatorios.nextInt(8);
@@ -66,60 +66,60 @@ public class ejercicio_7_25_OchoReinas_FuerzaBrutaAleatoria {
         ocuparCasillerosArribaIzquierda();
     }
 
-    public static void ocuparCasillerosArriba() {
+    private static void ocuparCasillerosArriba() {
         for (int i = filaReina - 1; i >= 0; i--) {
-            tablero[i][columnaReina] = 2;
+            tablero[i][columnaReina] = 2; // Se asigna 2 a tablero[i][columnaReina] para marcar las celdas eliminadas.
         }
     }
 
-    public static void ocuparCasillerosArribaDerecha() {
+    private static void ocuparCasillerosArribaDerecha() {
         for (int i = filaReina - 1, j = columnaReina + 1; i >= 0 && j < tablero[filaReina].length; i--, j++) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosDerecha() {
+    private static void ocuparCasillerosDerecha() {
         for (int i = columnaReina + 1; i < tablero[filaReina].length; i++) {
             tablero[filaReina][i] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajoDerecha() {
+    private static void ocuparCasillerosAbajoDerecha() {
         for (int i = filaReina + 1, j = columnaReina + 1; i < tablero.length && j < tablero[filaReina].length; i++, j++) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajo() {
+    private static void ocuparCasillerosAbajo() {
         for (int i = filaReina + 1; i < tablero.length; i++) {
             tablero[i][columnaReina] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajoIzquierda() {
+    private static void ocuparCasillerosAbajoIzquierda() {
         for (int i = filaReina + 1, j = columnaReina - 1; i < tablero.length && j >= 0; i++, j--) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosIzquierda() {
+    private static void ocuparCasillerosIzquierda() {
         for (int i = columnaReina - 1; i >= 0; i--) {
             tablero[filaReina][i] = 2;
         }
     }
 
-    public static void ocuparCasillerosArribaIzquierda() {
+    private static void ocuparCasillerosArribaIzquierda() {
         for (int i = filaReina - 1, j = columnaReina - 1; i >= 0 && j >= 0; i--, j--) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void imprimirTablero(int[][] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            for (int j = 0; j < arreglo[i].length; j++) {
-                if (arreglo[i][j] == 0) {
+    private static void imprimirTablero() {
+        for (int[] filas : tablero) {
+            for (int celda : filas) {
+                if (celda == 0) {
                     System.out.print(' ');
-                } else if (arreglo[i][j] == 1) {
+                } else if (celda == 1) {
                     System.out.print('*');
                 } else {
                     System.out.print('@');

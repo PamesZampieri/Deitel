@@ -1,11 +1,6 @@
 /*
 7.29 (Serie de Fibonacci) La serie de Fibonacci 0,1,1,2,3,5,8,13,21,... empieza con los términos 0 y 1, y tiene la
 propiedad de que cada término sucesivo es la suma de los dos términos anteriores.
-a) Escriba un método llamado fibonacci(n) que calcule el enésimo número de Fibonacci. Incorpore este
-método en una aplicación que permita al usuario introducir el valor de n.
-b) Determine el número de Fibonacci más grande que puede imprimirse en su sistema.
-c) Modifique la aplicación que escribió en la parte (a), de manera que utilice double en vez de int para
-calcular y devolver números de Fibonacci, y utilice esta aplicación modificada para repetir el inciso (b).
 */
 
 package ejercicios.capitulo7;
@@ -14,7 +9,11 @@ import java.util.Scanner;
 
 public class ejercicio_7_29_SerieDeFibonacci {
     public static void main(String[] args) {
-        /* a)
+        /*
+        a) Escriba un método llamado fibonacci(n) que calcule el enésimo número de Fibonacci. Incorpore este método en
+        una aplicación que permita al usuario introducir el valor de n.
+        */
+
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Escriba la posición del número que quiere conocer de la Serie de Fibonacci: ");
@@ -22,7 +21,10 @@ public class ejercicio_7_29_SerieDeFibonacci {
 
         System.out.printf("El número es: %d%n%n", fibonacciEnteros(numero));
 
-        b) y c)
+        /*
+        b) Determine el número de Fibonacci más grande que puede imprimirse en su sistema.
+        c) Modifique la aplicación que escribió en la parte (a), de manera que utilice double en vez de int para calcular
+        y devolver números de Fibonacci, y utilice esta aplicación modificada para repetir el inciso (b).
         */
 
         System.out.printf("%s%n", "SERIE DE FIBONACCI EN ENTEROS: ");
@@ -38,7 +40,7 @@ public class ejercicio_7_29_SerieDeFibonacci {
         }
     }
 
-    public static int fibonacciEnteros(int numero) {
+    private static int fibonacciEnteros(int numero) {
         int a = 0;
         int b = 1;
         int aux;
@@ -59,7 +61,7 @@ public class ejercicio_7_29_SerieDeFibonacci {
         return resultado;
     }
 
-    public static double fibonacciFlotantes(int numero) {
+    private static double fibonacciFlotantes(int numero) {
         int a = 0;
         int b = 1;
         int aux;

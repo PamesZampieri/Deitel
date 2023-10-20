@@ -13,7 +13,7 @@ número de eliminación más pequeño. ¿Por qué esta estrategia es intuitivame
 package ejercicios.capitulo7;
 
 public class ejercicio_7_24_OchoReinas {
-    private static int[][] tablero = new int[8][8];
+    private static final int[][] tablero = new int[8][8];
     private static final int[][] accesibilidad = {
             {22, 22, 22, 22, 22, 22, 22, 22},
             {22, 24, 24, 24, 24, 24, 24, 22},
@@ -31,16 +31,16 @@ public class ejercicio_7_24_OchoReinas {
             ponerReina();
         }
 
-        imprimirTablero(tablero);
+        imprimirTablero();
         System.out.println();
 
-        imprimirMatriz(accesibilidad);
+        imprimirMatriz();
     }
 
-    public static void ponerReina() {
-        int menorAccesibilidad = 29;
-        int filaPotencial = -1;
-        int columnaPotencial = -1;
+    private static void ponerReina() {
+        int menorAccesibilidad = 29; //bandera
+        int filaPotencial = -1; //bandera
+        int columnaPotencial = -1; //bandera
 
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero[i].length; j++) {
@@ -57,7 +57,7 @@ public class ejercicio_7_24_OchoReinas {
             }
         }
 
-        if (filaPotencial != -1 && columnaPotencial != -1) {
+        if (filaPotencial != -1) {
             filaReina = filaPotencial;
             columnaReina = columnaPotencial;
         }
@@ -74,60 +74,60 @@ public class ejercicio_7_24_OchoReinas {
         ocuparCasillerosArribaIzquierda();
     }
 
-    public static void ocuparCasillerosArriba() {
+    private static void ocuparCasillerosArriba() {
         for (int i = filaReina - 1; i >= 0; i--) {
             tablero[i][columnaReina] = 2; // Se asigna 2 a tablero[i][columnaReina] para marcar las celdas eliminadas.
         }
     }
 
-    public static void ocuparCasillerosArribaDerecha() {
+    private static void ocuparCasillerosArribaDerecha() {
         for (int i = filaReina - 1, j = columnaReina + 1; i >= 0 && j < tablero[filaReina].length; i--, j++) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosDerecha() {
+    private static void ocuparCasillerosDerecha() {
         for (int i = columnaReina + 1; i < tablero[filaReina].length; i++) {
             tablero[filaReina][i] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajoDerecha() {
+    private static void ocuparCasillerosAbajoDerecha() {
         for (int i = filaReina + 1, j = columnaReina + 1; i < tablero.length && j < tablero[filaReina].length; i++, j++) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajo() {
+    private static void ocuparCasillerosAbajo() {
         for (int i = filaReina + 1; i < tablero.length; i++) {
             tablero[i][columnaReina] = 2;
         }
     }
 
-    public static void ocuparCasillerosAbajoIzquierda() {
+    private static void ocuparCasillerosAbajoIzquierda() {
         for (int i = filaReina + 1, j = columnaReina - 1; i < tablero.length && j >= 0; i++, j--) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void ocuparCasillerosIzquierda() {
+    private static void ocuparCasillerosIzquierda() {
         for (int i = columnaReina - 1; i >= 0; i--) {
             tablero[filaReina][i] = 2;
         }
     }
 
-    public static void ocuparCasillerosArribaIzquierda() {
+    private static void ocuparCasillerosArribaIzquierda() {
         for (int i = filaReina - 1, j = columnaReina - 1; i >= 0 && j >= 0; i--, j--) {
             tablero[i][j] = 2;
         }
     }
 
-    public static void imprimirTablero(int[][] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            for (int j = 0; j < arreglo[i].length; j++) {
-                if (arreglo[i][j] == 0) {
+    private static void imprimirTablero() {
+        for (int[] filas : tablero) {
+            for (int celda : filas) {
+                if (celda == 0) {
                     System.out.print(' ');
-                } else if (arreglo[i][j] == 1) {
+                } else if (celda == 1) {
                     System.out.print('*');
                 } else {
                     System.out.print('@');
@@ -137,10 +137,10 @@ public class ejercicio_7_24_OchoReinas {
         }
     }
 
-    public static void imprimirMatriz(int[][] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            for (int j = 0; j < arreglo[i].length; j++) {
-                System.out.printf("%2d ", arreglo[i][j]);
+    private static void imprimirMatriz() {
+        for (int[] filas : accesibilidad) {
+            for (int celda : filas) {
+                System.out.printf("%2d ", celda);
             }
             System.out.println();
         }

@@ -10,7 +10,7 @@ proporciona como argumento. Por ejemplo, si lado es 5 y caracterRelleno es #, el
 Use la siguiente instrucción (en donde entrada es un objeto Scanner) para leer un carácter del usuario mediante el
 teclado:
 char relleno = entrada.next().charAt(0);
- */
+*/
 
 package ejercicios.capitulo6;
 

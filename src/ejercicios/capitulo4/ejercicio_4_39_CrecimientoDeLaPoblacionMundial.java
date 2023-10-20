@@ -57,4 +57,3 @@ public class ejercicio_4_39_CrecimientoDeLaPoblacionMundial {
         System.out.printf("%nDentro de %d años la población mundial será el doble de la actual.%n", yearDouble);
     }
 }
-

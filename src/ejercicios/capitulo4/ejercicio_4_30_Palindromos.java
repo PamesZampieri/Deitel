@@ -18,7 +18,7 @@ public class ejercicio_4_30_Palindromos {
         System.out.println();
 
         while (numero < 10000 || numero >= 100000) {
-            System.out.println("Error! El número ingresado no tiene 5 dígitos.");
+            System.out.println("Error. El número ingresado no tiene 5 dígitos.");
             System.out.println();
 
             System.out.print("Escriba un número entero de 5 dígitos: ");

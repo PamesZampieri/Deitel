@@ -35,4 +35,3 @@ public class ejercicio_6_18_MostrarCuadradoDeAsteriscos {
         }
     }
 }
-

@@ -39,7 +39,7 @@ public class Ejercicio_33 {
         System.out.print("Escriba su peso: ");
         peso = entrada.nextDouble();
 
-        System.out.print("Escriba su altura: ");
+        System.out.print("Escriba su altura en metros: ");
         altura = entrada.nextDouble();
 
         System.out.printf("%nEste es su Indice de Masa Corporal: %f%n", peso / (altura * altura));

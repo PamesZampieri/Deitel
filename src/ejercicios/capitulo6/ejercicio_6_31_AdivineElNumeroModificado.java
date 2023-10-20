@@ -17,33 +17,39 @@ public class ejercicio_6_31_AdivineElNumeroModificado {
 
     public static void main(String[] args) {
         int numeroGanador = 1 + numerosAleatorios.nextInt(1000);
+        int opcion = 1;
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Adivine un número entero entre 1 y 1000: ");
-        int numero = entrada.nextInt();
-        int cantidadDeIntentos = 1;
+        while (opcion != 2) {
+            System.out.print("Adivine un número entero entre 1 y 1000: ");
+            int numero = entrada.nextInt();
+            int cantidadDeIntentos = 1;
 
-        while (numero != numeroGanador) {
-            if (numero > numeroGanador) {
-                System.out.println("Demasiado Alto! Intente de nuevo.");
-            } else {
-                System.out.println("Demasiado Bajo! Intente de nuevo.");
+            while (numero != numeroGanador) {
+                if (numero > numeroGanador) {
+                    System.out.println("Demasiado Alto! Intente de nuevo.");
+                } else {
+                    System.out.println("Demasiado Bajo! Intente de nuevo.");
+                }
+
+                System.out.print("Nuevo intento: ");
+                numero = entrada.nextInt();
+                cantidadDeIntentos++;
             }
 
-            System.out.print("Nuevo intento: ");
-            numero = entrada.nextInt();
-            cantidadDeIntentos++;
-        }
+            System.out.println("Felicidades! Adivinó el número!");
 
-        System.out.println("Felicidades! Adivinó el número!");
+            if (cantidadDeIntentos < 10) {
+                System.out.println("¡O ya sabía usted el secreto o tuvo suerte!");
+            } else if (cantidadDeIntentos == 10) {
+                System.out.println("¡Ajá! ¡sabía usted el secreto!");
+            } else {
+                System.out.println("¡Debería haberlo hecho mejor!");
+            }
 
-        if (cantidadDeIntentos < 10) {
-            System.out.print("¡O ya sabía usted el secreto o tuvo suerte!");
-        } else if (cantidadDeIntentos == 10) {
-            System.out.print("¡Ajá! ¡sabía usted el secreto!");
-        } else {
-            System.out.print("¡Debería haberlo hecho mejor!");
+            System.out.print("¿Desea jugar otra vez? Presione 1 o presione 2 si desea terminar: ");
+            opcion = entrada.nextInt();
         }
     }
 }

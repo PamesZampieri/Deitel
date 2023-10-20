@@ -4,7 +4,6 @@ los cuatro triángulos de asteriscos, de manera que los cuatro patrones se impri
 utilice astutamente los ciclos for anidados].
  */
 
-
 package ejercicios.capitulo5;
 
 public class ejercicio_5_22_ImprimirUnTrianguloModificado {
@@ -31,9 +30,8 @@ public class ejercicio_5_22_ImprimirUnTrianguloModificado {
             for (int j = 10; j > i; j--) {
                 System.out.print('*');
             }
-            System.out.print(' ');
 
-            for (int j = 9; j > i; j--) {
+            for (int j = 10; j > i; j--) {
                 System.out.print(' ');
             }
             for (int j = 0; j <= i; j++) {
@@ -43,13 +41,3 @@ public class ejercicio_5_22_ImprimirUnTrianguloModificado {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

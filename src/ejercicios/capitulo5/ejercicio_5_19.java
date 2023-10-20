@@ -7,7 +7,7 @@ d) System.out.println((m <= 99) & (k < m));
 e) System.out.println((j >= i) || (k == m));
 f) System.out.println((k + m < j) | (3 – j >= k));
 g) System.out.println(!(k > m));
- */
+*/
 
 package ejercicios.capitulo5;
 
@@ -18,12 +18,12 @@ public class ejercicio_5_19 {
         int k = 3;
         int m = 2;
 
-        System.out.println(i == 1);
-        System.out.println(j == 3);
-        System.out.println((i >= 1) && (j < 4));
-        System.out.println((m <= 99) & (k < m));
-        System.out.println((j >= i) || (k == m));
-        System.out.println((k + m < j) | (3 - j >= k));
-        System.out.println(!(k > m));
+        System.out.println(i == 1);//true
+        System.out.println(j == 3);//false
+        System.out.println((i >= 1) && (j < 4));//true
+        System.out.println((m <= 99) & (k < m));//false
+        System.out.println((j >= i) || (k == m));//true
+        System.out.println((k + m < j) | (3 - j >= k));//false
+        System.out.println(!(k > m));//false
     }
 }

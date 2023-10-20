@@ -19,27 +19,34 @@ public class ejercicio_6_21_SeparacionDeDigitos {
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Escriba un número entero(entre 1-99999): ");
-        int numero1 = entrada.nextInt();
+        int numero = entrada.nextInt();
 
-        mostrarDigitos(numero1);
+        while (numero < 1 || numero > 99999) {
+            System.out.println("Error. El número ingresado es incorrecto.");
+
+            System.out.print("Escriba un número entero(entre 1-99999): ");
+            numero = entrada.nextInt();
+        }
+
+        mostrarDigitos(numero);
     }
 
-    public static void mostrarDigitos(int numero1) {
-        int digito1 = calcularResiduo(calcularCociente(numero1, 10000), 10);
-        int digito2 = calcularResiduo(calcularCociente(numero1, 1000), 10);
-        int digito3 = calcularResiduo(calcularCociente(numero1, 100), 10);
-        int digito4 = calcularResiduo(calcularCociente(numero1, 10), 10);
-        int digito5 = calcularResiduo(numero1, 10);
+    public static void mostrarDigitos(int numero) {
+        int digito1 = calcularCociente(numero, 10000);
+        int digito2 = calcularResiduo(calcularCociente(numero, 1000), 10);
+        int digito3 = calcularResiduo(calcularCociente(numero, 100), 10);
+        int digito4 = calcularResiduo(calcularCociente(numero, 10), 10);
+        int digito5 = calcularResiduo(numero, 10);
 
-        if (numero1 >= 10000 && numero1 <= 99999) {
+        if (numero >= 10000 && numero <= 99999) {
             System.out.printf("%d  %d  %d  %d  %d", digito1, digito2, digito3, digito4, digito5);
-        } else if (numero1 >= 1000 && numero1 <= 9999) {
+        } else if (numero >= 1000 && numero <= 9999) {
             System.out.printf("%d  %d  %d  %d", digito2, digito3, digito4, digito5);
-        } else if (numero1 >= 100 && numero1 <= 999) {
+        } else if (numero >= 100 && numero <= 999) {
             System.out.printf("%d  %d  %d", digito3, digito4, digito5);
-        } else if (numero1 >= 10 && numero1 <= 99) {
+        } else if (numero >= 10 && numero <= 99) {
             System.out.printf("%d  %d", digito4, digito5);
-        } else if (numero1 >= 1 && numero1 <= 9) {
+        } else if (numero >= 1 && numero <= 9) {
             System.out.printf("%d", digito5);
         }
     }

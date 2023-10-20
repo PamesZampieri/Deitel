@@ -1,7 +1,7 @@
 /*
 5.11 (Buscar el valor menor) Escriba una aplicación que encuentre el menor de varios enteros. Suponga que el
 primer valor leído especifica el número de valores que el usuario introducirá.
- */
+*/
 
 package ejercicios.capitulo5;
 

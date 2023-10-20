@@ -3,7 +3,7 @@
 entero positivo n (se escribe como n! y se pronuncia “factorial de n”) es igual al producto de los enteros positivos del
 1 a n. Escriba una aplicación que calcule los factoriales del 1 al 20. Use el tipo long. Muestre los resultados en
 formato tabular. ¿Qué dificultad podría impedir que usted calculara el factorial de 100?
- */
+*/
 
 package ejercicios.capitulo5;
 

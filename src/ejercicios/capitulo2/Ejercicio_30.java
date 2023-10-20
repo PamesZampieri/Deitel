@@ -24,7 +24,7 @@ public class Ejercicio_30 {
         System.out.print("Escriba un numero de 5 digitos: ");
         numero = entrada.nextInt();
 
-        System.out.printf("%d   ", numero / 10000 % 10);
+        System.out.printf("%d   ", numero / 10000);
 
         System.out.printf("%d   ", numero / 1000 % 10);
 

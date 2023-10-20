@@ -22,24 +22,27 @@ public class ejercicio_4_19_CalculadoraComisionesVenta {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Escriba el Número de Vendedor:  ");
+        System.out.print("Escriba el número de vendedor o (-1) para terminar:  ");
         int sellerID = entrada.nextInt();
-        System.out.print("Escriba el Valor del artículo vendido:  ");
-        double valorArticuloVendido = entrada.nextDouble();
 
-        double totalArticulosVendidos = 0;
-        double gananciaFija = 200;
-        double coeficientePorVentas = 0.09;
+        if (sellerID != -1) {
+            System.out.print("Escriba el valor del artículo vendido o (-1) para terminar:  ");
+            double valorArticuloVendido = entrada.nextDouble();
 
-        while (valorArticuloVendido != -1) {
-            totalArticulosVendidos += valorArticuloVendido;
+            double totalArticulosVendidos = 0;
+            double gananciaFija = 200;
+            double coeficientePorVentas = 0.09;
 
-            System.out.print("Escriba el Valor del artículo vendido:  ");
-            valorArticuloVendido = entrada.nextDouble();
+            while (valorArticuloVendido != -1) {
+                totalArticulosVendidos += valorArticuloVendido;
+
+                System.out.print("Escriba el valor del artículo vendido o (-1) para terminar:  ");
+                valorArticuloVendido = entrada.nextDouble();
+            }
+
+            double comisionPorVentas = totalArticulosVendidos * coeficientePorVentas;
+            double gananciaFinal = gananciaFija + comisionPorVentas;
+            System.out.printf("El ingreso total del vendedor %d es de: %.2f%n", sellerID, gananciaFinal);
         }
-
-        double comisionPorVentas = totalArticulosVendidos * coeficientePorVentas;
-        double gananciaFinal = gananciaFija + comisionPorVentas;
-        System.out.printf("El ingreso total del vendedor %d es de: %.2f%n", sellerID, gananciaFinal);
     }
 }

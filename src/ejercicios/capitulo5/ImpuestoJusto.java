@@ -7,7 +7,7 @@ más preciso decir que la tasa sea del 30%; revise esto con cuidado. Escriba un 
 introduzca sus gastos en diversas categorías de gastos disponibles (por ejemplo, alojamiento, comida, ropa, transporte,
 educación, servicios médicos, vacaciones), y que después imprima el impuesto FairTax estimado que esa persona
 pagaría.
- */
+*/
 
 package ejercicios.capitulo5;
 
@@ -51,4 +51,3 @@ public class ImpuestoJusto {
         while (continuar != 2);
     }
 }
-
